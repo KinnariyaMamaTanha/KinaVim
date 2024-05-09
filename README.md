@@ -38,4 +38,46 @@ vim ~/.vim/vimrc
 
 ## Screenshots
 
+- Startup UI
 
+![](./screenshots/1.png)
+
+- Fuzzy finder
+
+![](./screenshots/2.png)
+
+- Floating terminal
+
+![](./screenshots/3.png)
+
+- ipython integration
+
+![](./screenshots/4.png)
+
+- File tree and tag list
+
+![](./screenshots/5.png)
+
+- Undo history
+
+![](./screenshots/6.png)
+
+- [yazi](https://github.com/sxyazi/yazi) integration
+
+![](./screenshots/7.png)
+
+- Git information integration
+
+![](./screenshots/8.png)
+
+- [lazygit](https://github.com/jesseduffield/lazygit) integration
+
+![](./screenshots/9.png)
+
+- Markdown preview
+
+![](./screenshots/10.png)
+
+- Zen mode
+
+![](./screenshots/11.png)
