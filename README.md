@@ -5,8 +5,8 @@
 ## Requirements
 
 - a nerd font and a 256-color terminal
-- vim >= 9.0, with *python3, conceal, terminal* support.
-- curl, git, nodejs, yarn
+- vim >= 9.0, with *python3, conceal, terminal, patch* support.
+- curl, git, nodejs, yarn, universal-ctags
 - python3, gcc, g++, clangd(optional), black(python module)
 - fzf, yazi, lazygit(all optional but useful)
 

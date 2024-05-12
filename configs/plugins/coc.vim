@@ -15,7 +15,8 @@ let g:coc_global_extensions = [
     \ 'coc-floaterm',
     \ 'coc-snippets',
     \ 'coc-word',
-    \ 'coc-symbol-line'
+    \ 'coc-symbol-line',
+    \ 'coc-yank'
     \ ]
 
 " Use tab for trigger completion with characters ahead and navigate
@@ -88,18 +89,18 @@ nnoremap <silent> <leader>yc :CocCommand yank.clean<CR>
 " navigate chunks of current buffer
 nmap [g <Plug>(coc-git-prevchunk)
 nmap ]g <Plug>(coc-git-nextchunk)
+" navigate chunks of conflicts
+nmap [c <Plug>(coc-git-prevconflict)
+nmap ]c <Plug>(coc-git-nextconflict)
 " show chunk diff at current position
 nmap df <Plug>(coc-git-chunkinfo)
 " show commit contains current position
 nmap cm <Plug>(coc-git-commit)
+" show git status with coc-list
+nnoremap <silent> gs  :<C-u>CocList --normal gstatus<CR>
 
 " ===================
 " ==== coc-pairs ====
 " ===================
 autocmd FileType markdown let b:coc_pairs = [["$", "$"]]
-
-" ========================
-" ==== coc-translator ====
-" ========================
-nmap tr <Plug>(coc-translator-p)
 

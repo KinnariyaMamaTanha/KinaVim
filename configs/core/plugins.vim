@@ -14,9 +14,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-plug' " vim-plug
 Plug 'neoclide/coc.nvim', { 'branch': 'release' , 'for': g:coc_filetypes, 'on': g:coc_commands } " LSP client
 Plug 'honza/vim-snippets', { 'on': [] } " code snippets，dependence of coc-snippets
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install', 'for': ['markdown', 'vim-plug'], 'on': 'MarkdownPreview'} " markdown preview
-Plug 'dhruvasagar/vim-table-mode', {'for': ['markdown', 'vim-plug'], 'on': 'TableModeToggle'}
-Plug 'mzlogin/vim-markdown-toc', {'for': ['markdown', 'vim-plug'], 'on': ['GenTocGFM', 'GenTocRedcarpet', 'RemoveToc']}
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install', 'for': ['markdown'], 'on': 'MarkdownPreview'} " markdown preview
+Plug 'dhruvasagar/vim-table-mode', {'for': ['markdown'], 'on': 'TableModeToggle'}
+Plug 'mzlogin/vim-markdown-toc', {'for': ['markdown'], 'on': ['GenTocGFM', 'GenTocRedcarpet', 'RemoveToc']}
 Plug 'sheerun/vim-polyglot' " collections of highlight plugins
 Plug 'jaxbot/semantic-highlight.vim', {'on': ['SemanticHighlight', 'SemanticHighlightToggle']} " semantic highlight, interesting
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' } " zen mode
@@ -32,8 +32,13 @@ Plug 'liuchengxu/vista.vim' " tag list
 Plug 'voldikss/vim-floaterm', { 'on': 'FloatermNew' } " floating terminal
 Plug 'vim-airline/vim-airline', { 'on': [] } " beautiful statusline
 Plug 'ryanoasis/vim-devicons', { 'on': [] } " icons for statusline
-Plug 'itchyny/vim-cursorword', {'for': ['cpp', 'c', 'python']} " underlines the word under the cursor
-Plug 'rhysd/clever-f.vim'
+Plug 'rhysd/clever-f.vim' " cleverer f key
+Plug 'Asheq/close-buffers.vim', {'on': 'Bdelete'}, " close hidden buffers
+Plug 'matze/vim-move' " move lines, characters up, down, left, right more quickly
+Plug 'tpope/vim-surround' " change surround brackets and so on
+Plug 'tpope/vim-repeat' " coordination with vim-surround
+Plug 'voldikss/vim-translator' " translator for words and paragraphs
+Plug 'gcmt/wildfire.vim'
 
 " dockerfile support
 " Plug 'ekalinin/Dockerfile.vim'

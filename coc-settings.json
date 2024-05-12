@@ -1,5 +1,12 @@
 {
-  "git.virtualTextPrefix": ">>> ",
+  "git.virtualTextPrefix": " ",
+  "git.addGBlameToVirtualText": true,
+  "git.showCommitInFloating": true,
+  "git.floatConfig": {
+    "border": true,
+    "rounded": true,
+    "title": "Commit Info",
+  },
   "coc.preferences.extensionUpdateCheck": "daily",
   "coc.preferences.enableMessageDialog": true,
   "coc.preferences.enableLinkedEditing": true,
@@ -242,7 +249,7 @@
   "python.linting.pycodestyleEnabled": true,
   "python.linting.pydocstyleEnabled": true,
   "pyright.testing.provider": "pytest",
-  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/18.1.3/clangd_18.1.3/bin/clangd",
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/clangd_17.0.3/bin/clangd",
   "clangd.checkUpdates": true,
   "markdownlint.onChange": false,
   "markdownlint.config": {

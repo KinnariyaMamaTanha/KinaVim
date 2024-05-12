@@ -3,7 +3,6 @@ let mapleader = ' ' " the leader key
 
 " line number settings
 set relativenumber " show relative line number
-set number " show line number
 
 " fold method settings
 set foldmethod=indent " fold codes accroding to the indent
@@ -27,7 +26,6 @@ set nocompatible " turn off keyboard settings for vi
 set hidden " hide buffers
 set showmatch " show paired brackets
 set ruler " turn on statusline
-set clipboard^=unnamed " clipboard
 set autochdir " change the cwd when entering a new file
 set list " show the trailing whitespaces
 set mouse=a " allow using mouse
@@ -65,13 +63,6 @@ set hlsearch
 set incsearch
 set ignorecase " ignore case when searching, auto-complete
 set smartcase " smarter case
-augroup Insertenterleave
-  autocmd!
-  autocmd insertleave,winenter * set cursorline | set relativenumber | autocmd! Insertenterleave
-  autocmd insertenter,winleave * set nocursorline | set norelativenumber | autocmd! Insertenterleave
-  " autocmd insertleave,winenter * set relativenumber
-  " autocmd insertenter,winleave * set norelativenumber
-augroup END
 
 syntax enable " syntax highlight enable
 syntax on

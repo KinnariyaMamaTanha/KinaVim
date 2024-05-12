@@ -26,4 +26,7 @@ source ~/.vim/configs/plugins/undotree.vim
 source ~/.vim/configs/plugins/nerdcommenter.vim
 source ~/.vim/configs/plugins/goyo.vim
 source ~/.vim/configs/plugins/clever-f.vim
-
+source ~/.vim/configs/plugins/close-buffers.vim
+source ~/.vim/configs/plugins/move.vim
+source ~/.vim/configs/plugins/translator.vim
+source ~/.vim/configs/plugins/wildfire.vim

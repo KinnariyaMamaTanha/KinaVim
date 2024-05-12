@@ -7,9 +7,23 @@
 set timeoutlen=200
 
 " better move to the start and end of the line
-nmap H g^
-nmap L g$
-nmap Y g0
+nnoremap H ^
+nnoremap L $
+nnoremap Y 0
+
+" These lines fix some Alt key problems for me
+let c='a'
+while c <= 'z'
+  exec "set <A-".c.">=\e".c
+  exec "imap \e".c." <A-".c.">"
+  let c = nr2char(1+char2nr(c))
+endw
+
+nnoremap <A-h> g^
+nnoremap <A-j> gj
+nnoremap <A-k> gk
+nnoremap <A-l> g$
+nnoremap <A-y> g0
 
 " source the config inside vim
 map <leader>r :source ~/.vim/vimrc<CR>
@@ -22,42 +36,54 @@ noremap T H
 noremap B L
 
 " split windows
-map sh :set splitright<CR>:vsplit<CR>
-map sl :set nosplitright<CR>:vsplit<CR>
-map sj :set splitbelow<CR>:split<CR>
-map sk :set nosplitbelow<CR>:split<CR>
+nnoremap sh :set splitright<CR>:vsplit<CR>
+nnoremap sl :set nosplitright<CR>:vsplit<CR>
+nnoremap sj :set splitbelow<CR>:split<CR>
+nnoremap sk :set nosplitbelow<CR>:split<CR>
 " move between windows
-map <LEADER>j <C-w>j
-map <LEADER>k <C-w>k
-map <LEADER>h <C-w>h
-map <LEADER>l <C-w>l
+nnoremap <LEADER>j <C-w>j
+nnoremap <LEADER>k <C-w>k
+nnoremap <LEADER>h <C-w>h
+nnoremap <LEADER>l <C-w>l
 " resize windows
-map <up> :res +1<CR>
-map <down> :res -1<CR>
-map <left> :vertical resize +1<CR>
-map <right> :vertical resize -1<CR>
+nnoremap <up> :res +1<CR>
+nnoremap <down> :res -1<CR>
+nnoremap <left> :vertical resize +1<CR>
+nnoremap <right> :vertical resize -1<CR>
 
 " open new tabline
-map <C-t> :tabe<CR>
+nnoremap <C-t> :tabe<CR>
 " move between tablines
-nmap <leader>1 <Plug>AirlineSelectTab1
-nmap <leader>2 <Plug>AirlineSelectTab2
-nmap <leader>3 <Plug>AirlineSelectTab3
-nmap <leader>4 <Plug>AirlineSelectTab4
-nmap <leader>5 <Plug>AirlineSelectTab5
-nmap <leader>6 <Plug>AirlineSelectTab6
-nmap <leader>7 <Plug>AirlineSelectTab7
-nmap <leader>8 <Plug>AirlineSelectTab8
-nmap <leader>9 <Plug>AirlineSelectTab9
-nmap [t <Plug>AirlineSelectPrevTab
-nmap ]t <Plug>AirlineSelectNextTab
+nnoremap <leader>1 <Plug>AirlineSelectTab1
+nnoremap <leader>2 <Plug>AirlineSelectTab2
+nnoremap <leader>3 <Plug>AirlineSelectTab3
+nnoremap <leader>4 <Plug>AirlineSelectTab4
+nnoremap <leader>5 <Plug>AirlineSelectTab5
+nnoremap <leader>6 <Plug>AirlineSelectTab6
+nnoremap <leader>7 <Plug>AirlineSelectTab7
+nnoremap <leader>8 <Plug>AirlineSelectTab8
+nnoremap <leader>9 <Plug>AirlineSelectTab9
+nnoremap [t <Plug>AirlineSelectPrevTab
+nnoremap ]t <Plug>AirlineSelectNextTab
 
 " save and quit
-map <C-s> :w<CR>
-map <C-q> :q<CR>
+nnoremap <C-s> :w<CR>
+nnoremap <C-q> :q<CR>
 
 " ban s key
-noremap s <nop>
+nnoremap s <nop>
+
+" choose all
+nnoremap <C-a> ggVG
+
+" Go Home
+nnoremap <silent> <Home> :Startify<CR>
+
+" no highlight search
+nnoremap <LEADER><CR> :nohlsearch<CR>
+
+" semantic highlight
+nnoremap <leader>s :SemanticHighlightToggle<CR>
 
 " =====================
 " ==== Insert Mode ====
@@ -70,30 +96,26 @@ inoremap JK <Esc>
 " ==== Visual Mode ====
 " =====================
 
-vmap JK <Esc>
+vnoremap JK <Esc>
 noremap VV <C-q>
 xnoremap <  <gv
 xnoremap >  >gv
 
-" =======================
-" ==== other keymaps ====
-" =======================
+" WSL2 yank support, according to https://www.reddit.com/r/bashonubuntuonwindows/comments/be2q3l/comment/el2vx7u/?utm_source=share&utm_medium=web2x
+let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
+augroup WSLYank
+    autocmd!
+    autocmd TextYankPost * if v:event.operator ==# 'y' | call system('cat |' . s:clip, @0) | endif
+augroup END
 
-" use system clipboard in wsl2, performe badly
-vmap <C-c> :w !clip.exe<CR><CR>
+" ======================
+" ==== command mode ====
+" ======================
+cnoremap <C-h> <Home>
+cnoremap <C-l> <End>
+cnoremap <C-b> <S-Left>
+cnoremap <C-e> <S-Right>
 
-" move the current line up or down
-noremap <M-up> :<c-u>execute 'move -1-'. v:count1<cr>
-noremap <M-down> :<c-u>execute 'move +'. v:count1<cr>
-
-" Go Home
-noremap <silent> <leader>gh :Startify<CR>
-
-" no highlight search
-noremap <LEADER><CR> :nohlsearch<CR>
-
-" semantic highlight
-nnoremap <leader>s :SemanticHighlightToggle<CR>
 
 " ========================
 " ==== plugin keymaps ====
