@@ -1,6 +1,6 @@
 {
   "git.virtualTextPrefix": " ",
-  "git.addGBlameToVirtualText": true,
+  "git.addGBlameToVirtualText": false,
   "git.showCommitInFloating": true,
   "git.floatConfig": {
     "border": true,
@@ -42,7 +42,7 @@
     "value": "\uf89f",
     "variable": "\uea88"
   },
-  "suggest.virtualText": true,
+  "suggest.virtualText": false,
   "diagnostic.errorSign": "\uf467",
   "diagnostic.warningSign": "\uf071",
   "diagnostic.infoSign": "\uea74",
@@ -50,10 +50,9 @@
   "diagnostic.checkCurrentLine": true,
   "diagnostic.format": "%message (%source)",
   "diagnostic.virtualTextPrefix": " ❯❯❯ ",
-  "diagnostic.virtualText": true,
+  "diagnostic.virtualText": false,
   "diagnostic.virtualTextFormat": "%message (%source)",
   "diagnostic.messageDelay": 10,
-  "diagnostic-languageserver.mergeConfig": true,
   "diagnostic.virtualTextLineSeparator": " \\ ",
   "diagnostic.virtualTextLimitInOneLine": 2,
   "codeLens.enable": true,
@@ -189,7 +188,7 @@
     "X": "systemExecute",
     "gd": "listDrive",
     "f": "search",
-    "F": "searchRecursive",
+    "F": "search:recursive",
     "gf": "gotoSource:file",
     "gb": "gotoSource:buffer",
     "[[": [
@@ -254,17 +253,9 @@
   "markdownlint.onChange": false,
   "markdownlint.config": {
     "default": true,
-    "line_length": false
-  },
-  "languageserver": {
-    "asm-lsp": {
-      "command": "asm-lsp",
-      "filetypes": [
-        "asm",
-        "s",
-        "S"
-      ]
-    },
+    "line_length": false,
+    "indentation": false,
+    "no-inline-html": false
   },
   "yank.highlight.duration": 200,
   "workspace.rootPatterns": [
@@ -273,4 +264,6 @@
     ".projections.json",
     ".vscode"
   ],
+  "list.floatPreview": true,
+  "git.enableGutters": true,
 }

@@ -2,6 +2,7 @@
 let mapleader = ' ' " the leader key
 
 " line number settings
+set number
 set relativenumber " show relative line number
 
 " fold method settings

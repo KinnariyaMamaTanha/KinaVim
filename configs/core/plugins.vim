@@ -5,7 +5,7 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-let g:coc_filetypes = ['cpp', 'c', 'python', 'json', 'jsonc', 'markdown', 'vim', 'lua', 'yaml', 'sh', 'zsh', 'gitignore']
+let g:coc_filetypes = ['cpp', 'c', 'python', 'json', 'jsonc', 'markdown', 'vim', 'lua', 'yaml', 'sh', 'zsh', 'gitignore', 'toml', 'html']
 let g:coc_commands = ['CocCommand', 'CocList', 'CocInstall', 'CocUninstall']
 
 "============================= Plugins =========================
@@ -22,6 +22,7 @@ Plug 'jaxbot/semantic-highlight.vim', {'on': ['SemanticHighlight', 'SemanticHigh
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' } " zen mode
 Plug 'junegunn/limelight.vim', { 'on': 'Goyo' } " better zen mode
 Plug 'joshdick/onedark.vim' " the second night theme
+Plug 'ghifarit53/tokyonight-vim'
 Plug 'mhinz/vim-startify', { 'branch': 'center' } " start menu
 Plug 'Yggdroot/indentLine' " indent line
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' } " search
@@ -39,6 +40,7 @@ Plug 'tpope/vim-surround' " change surround brackets and so on
 Plug 'tpope/vim-repeat' " coordination with vim-surround
 Plug 'voldikss/vim-translator' " translator for words and paragraphs
 Plug 'gcmt/wildfire.vim'
+Plug 'wakatime/vim-wakatime' " awake time
 
 " dockerfile support
 " Plug 'ekalinin/Dockerfile.vim'
@@ -46,7 +48,6 @@ Plug 'gcmt/wildfire.vim'
 " Plug 'yorickpeterse/vim-paper', {'on': 'colorscheme'}  like the paper
 " Plug 'tomasiser/vim-code-dark', {'on': 'colorscheme'}  vscode like theme
 " Plug 'drewtempelmeyer/palenight.vim', {'on': 'colorscheme'}  the first night theme
-" Plug 'ghifarit53/tokyonight-vim', {'on': 'colorscheme'}  the third night theme
 
 call plug#end()
 

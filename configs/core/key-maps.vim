@@ -91,6 +91,14 @@ nnoremap <leader>s :SemanticHighlightToggle<CR>
 
 " quicker <ESC>
 inoremap JK <Esc>
+inoremap <C-s> <ESC>:w<CR>a
+
+" Better Chinese bracket
+inoremap 《 《》<LEFT>
+inoremap （ （）<LEFT>
+inoremap 【 【】<LEFT>
+inoremap “ “”<LEFT>
+inoremap ‘ ‘’<LEFT>
 
 " =====================
 " ==== Visual Mode ====

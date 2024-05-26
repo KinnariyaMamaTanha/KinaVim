@@ -15,7 +15,6 @@ let g:coc_global_extensions = [
     \ 'coc-floaterm',
     \ 'coc-snippets',
     \ 'coc-word',
-    \ 'coc-symbol-line',
     \ 'coc-yank'
     \ ]
 
@@ -63,6 +62,15 @@ function! ShowDocumentation()
     call feedkeys('K', 'in')
   endif
 endfunction
+
+" Applying code actions to the selected code block
+" Example: `<leader>aap` for current paragraph
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+" Remap keys for applying code actions at the cursor position
+nmap <leader>ac  <Plug>(coc-codeaction-cursor)
+" Remap keys for apply code actions affect whole buffer
+nmap <leader>as  <Plug>(coc-codeaction-source)
 
 " ======================
 " ==== coc-explorer ====

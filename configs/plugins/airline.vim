@@ -13,6 +13,6 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
-" integrate coc-symbol-line, coc-git
+" integrate coc-git
 let g:airline_section_b = '%{%get(g:,"coc_git_status","")%}'
-let g:airline_section_c = '%{%get(b:, "coc_symbol_line_plain", "")%}'
+let g:airline_section_c = ''
