@@ -108,6 +108,9 @@ vnoremap JK <Esc>
 noremap VV <C-q>
 xnoremap <  <gv
 xnoremap >  >gv
+vnoremap H ^
+vnoremap L $
+vnoremap Y 0
 
 " WSL2 yank support, according to https://www.reddit.com/r/bashonubuntuonwindows/comments/be2q3l/comment/el2vx7u/?utm_source=share&utm_medium=web2x
 let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point

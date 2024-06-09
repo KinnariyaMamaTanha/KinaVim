@@ -5,7 +5,7 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-let g:coc_filetypes = ['cpp', 'c', 'python', 'json', 'jsonc', 'markdown', 'vim', 'lua', 'yaml', 'sh', 'zsh', 'gitignore', 'toml', 'html']
+let g:coc_filetypes = ['cpp', 'c', 'python', 'json', 'jsonc', 'markdown', 'vim', 'lua', 'yaml', 'sh', 'zsh', 'gitignore', 'toml', 'html', 'text']
 let g:coc_commands = ['CocCommand', 'CocList', 'CocInstall', 'CocUninstall']
 
 "============================= Plugins =========================
@@ -23,7 +23,7 @@ Plug 'junegunn/goyo.vim', { 'on': 'Goyo' } " zen mode
 Plug 'junegunn/limelight.vim', { 'on': 'Goyo' } " better zen mode
 Plug 'joshdick/onedark.vim' " the second night theme
 Plug 'ghifarit53/tokyonight-vim'
-Plug 'mhinz/vim-startify', { 'branch': 'center' } " start menu
+Plug 'KinnariyaMamaTanha/vim-startify', { 'branch': 'center' } " start menu
 Plug 'Yggdroot/indentLine' " indent line
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' } " search
 Plug 'luochen1990/rainbow' " highlight brackets

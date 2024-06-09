@@ -4,10 +4,12 @@ noremap <C-F5> :call RunCode()<CR>
 func! RunCode()
     exec "w"
     if &filetype == 'c'
-        !gcc % -g -o %<
+        silent !gcc % -g -o %< 
+        redraw!
         FloatermNew --autoclose=0 ./%<
     elseif &filetype == 'cpp'
-        !g++ % -g -o %<
+        silent !g++ % -g -o %<
+        redraw!
         FloatermNew --autoclose=0 ./%<
     elseif &filetype == 'python'
         FloatermNew --autoclose=0 python %
@@ -28,3 +30,6 @@ func! Interactive()
         FloatermNew --autoclose=1 --wintype=vsplit --position=right --width=0.5 ipython
     endif
 endfunction
+
+" Make
+command! Make silent !make | redraw! | cwindow

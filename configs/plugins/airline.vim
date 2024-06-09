@@ -4,7 +4,7 @@ let g:airline_powerline_fonts = 1
 
 " Override certain file names
 let g:airline_filetype_overrides = {
-            \ 'vista': ['Tags','']
+            \ 'vista_kind': ['Tags','']
             \ }
 
 " enable the winbar tabline

@@ -33,7 +33,7 @@ vim ~/.vim/vimrc
 - After install all the plugins, you should:
 
 1. Place `~/.vim/plugged/onedark.vim/autoload/airline/themes/onedark.vim` in your `~/.vim/plugged/vim-airline/autoload/airline/themes/` directory
-2. Modify the source code of `vim-startify` according to the [issue](https://github.com/mhinz/vim-startify/issues/400)
+2. Modify the source code of `vim-startify` in `~/.vim/plugged/vim-startify/autoload/startify.vim` according to the [issue](https://github.com/mhinz/vim-startify/issues/400#issuecomment-565858638)（6.9.2024: I forked the code of [mhinz/vim-startify](https://github.com/mhinz/vim-startify) and make some modifications, so now you don't need to fix the trouble manually, however, I won't develop any other functions so you may still need to switch to the original repository）
 3. Read the config to be familiar with its keymaps and functions.
 
 ## Screenshots
