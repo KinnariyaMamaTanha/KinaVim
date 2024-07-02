@@ -9,10 +9,10 @@ nmap <C-left> :FloatermPrev<CR>
 nmap <C-right> :FloatermNext<CR>
 
 " yazi integration
-command! YA FloatermNew --width=0.8 --height=0.8 yazi
+command! Ya FloatermNew --width=0.8 --height=0.8 yazi
 
 " lazygit integration
 command! Lgit FloatermNew --width=0.9 --height=0.9 lazygit
 
 " fzf integration
-command! FZF FloatermNew fzf
+command! Fzf FloatermNew fzf

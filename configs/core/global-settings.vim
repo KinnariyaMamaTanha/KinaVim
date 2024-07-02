@@ -26,11 +26,9 @@ let &t_EI = "\<Esc>[2 q"
 set nocompatible " turn off keyboard settings for vi
 set hidden " hide buffers
 set showmatch " show paired brackets
-set ruler " turn on statusline
 set autochdir " change the cwd when entering a new file
 set list " show the trailing whitespaces
 set mouse=a " allow using mouse
-set tw=0
 set shortmess+=c " shorter completion messages, for coc.nvim
 let &t_ut='' " Prevent incorrect backgroung rendering
 

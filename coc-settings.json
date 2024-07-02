@@ -1,4 +1,8 @@
 {
+  "markdown-preview-enhanced.enableScriptExecution": true,
+  "markdown-preview-enhanced.enableHTML5Embed": true,
+  "markdown-preview-enhanced.enableTypographer": true,
+  "markdown-preview-enhanced.mathjaxV3ScriptSrc": "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js",
   "git.virtualTextPrefix": " ",
   "git.addGBlameToVirtualText": false,
   "git.showCommitInFloating": true,
@@ -248,8 +252,9 @@
   "python.linting.pycodestyleEnabled": true,
   "python.linting.pydocstyleEnabled": true,
   "pyright.testing.provider": "pytest",
+  "pydocstring.enableFileAction": true,
   "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/clangd_17.0.3/bin/clangd",
-  "clangd.checkUpdates": true,
+  "inlayHint.display": false,
   "markdownlint.onChange": false,
   "markdownlint.config": {
     "default": true,
@@ -265,5 +270,4 @@
     ".vscode"
   ],
   "list.floatPreview": true,
-  "git.enableGutters": true,
 }

@@ -2,12 +2,25 @@
 
 > My configuration of vim on ubuntu22.04(WSL2).
 
+## Features
+
+1. Full Support for C, C++, Python, markdown, html, dockerfile, cmake, assembly and viml, including auto-completion, formatting, highlighting and linting.
+2. Wonderful file navigation and tag list(powered by LeaderF, coc-explorer, yazi, vista and universal-ctags).
+3. Integrated with various apps, including yazi, fzf, git and lazygit.
+4. Great English2Chinese translation.
+5. Beautiful appearance.
+
 ## Requirements
 
-- a nerd font and a 256-color terminal
+- terminal with a nerd font and 256-color
 - vim >= 9.0, with *python3, conceal, terminal, patch* support.
 - curl, git, nodejs, yarn, universal-ctags
-- python3, gcc, g++, clangd(optional), black(python module)
+- For Python:
+    - python3, black
+- For C/C++:
+    - gcc, g++, clangd, make, cmake(optional), cmake-format(optional)
+- For assembly:
+    - asm-lsp (using cargo)
 - fzf, yazi, lazygit(all optional but useful)
 
 ## Installation

@@ -13,7 +13,14 @@ let g:coc_global_extensions = [
     \ 'coc-floaterm',
     \ 'coc-snippets',
     \ 'coc-word',
-    \ 'coc-yank'
+    \ 'coc-yank',
+    \ 'coc-pydocstring',
+    \ 'coc-cmake',
+    \ 'coc-docker',
+    \ 'coc-ecdict',
+    \ 'coc-webview',
+    \ 'coc-markdown-preview-enhanced',
+    \ 'coc-html',
     \ ]
 
 " Use tab for trigger completion with characters ahead and navigate
@@ -34,6 +41,8 @@ endfunction
 
 " Use <c-space> to trigger completion
 inoremap <silent><expr> <c-space> coc#refresh()
+" signature help in insert mode
+inoremap <silent> ,s <C-r>=CocActionAsync('showSignatureHelp')<CR>
 
 " Use `[d` and `]d` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list
@@ -63,12 +72,12 @@ endfunction
 
 " Applying code actions to the selected code block
 " Example: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
 " Remap keys for applying code actions at the cursor position
-nmap <leader>ac  <Plug>(coc-codeaction-cursor)
-" Remap keys for apply code actions affect whole buffer
-nmap <leader>as  <Plug>(coc-codeaction-source)
+nmap <silent> sa <Plug>(coc-codeaction-source)
+nmap <silent> cl <Plug>(coc-codeaction-line)
+xmap <silent> ca <Plug>(coc-codeaction-selected)
+nmap <silent> ca <Plug>(coc-codeaction)
+nmap <silent> qf <Plug>(coc-fix-current)
 
 " ======================
 " ==== coc-explorer ====
@@ -80,6 +89,13 @@ noremap <F2> :CocCommand explorer<CR>
 " ==== rename symbols ====
 " ========================
 nmap rn <Plug>(coc-rename)
+
+" ==================
+" ==== refactor ====
+" ==================
+nmap <silent> re <Plug>(coc-codeaction-refactor)
+xmap <silent> r  <Plug>(coc-codeaction-refactor-selected)
+nmap <silent> r  <Plug>(coc-codeaction-refactor-selected)
 
 " ==================
 " ==== coc-yank ====
@@ -110,3 +126,7 @@ nnoremap <silent> gs  :<C-u>CocList --normal gstatus<CR>
 " ===================
 autocmd FileType markdown let b:coc_pairs = [["$", "$"]]
 
+" =======================================
+" ==== coc-markdown-preview-enhanced ====
+" =======================================
+nmap <C-m><C-k> CocCommand markdown-preview-enhanced.openPreview<CR>

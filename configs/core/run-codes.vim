@@ -1,6 +1,6 @@
 
 " run codes for cpp, c, python, sh
-noremap <C-F5> :call RunCode()<CR>
+noremap <F5> :call RunCode()<CR>
 func! RunCode()
     exec "w"
     if &filetype == 'c'
@@ -14,7 +14,7 @@ func! RunCode()
     elseif &filetype == 'python'
         FloatermNew --autoclose=0 python %
     elseif &filetype == 'markdown'
-        MarkdownPreview
+        CocCommand markdown-preview-enhanced.openPreview
     elseif &filetype == 'sh'
         FloatermNew --autoclose=0 bash %
     endif

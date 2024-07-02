@@ -16,7 +16,6 @@ source ~/.vim/configs/core/run-codes.vim
 source ~/.vim/configs/plugins/airline.vim
 source ~/.vim/configs/plugins/coc.vim
 source ~/.vim/configs/plugins/floaterm.vim
-source ~/.vim/configs/plugins/markdown-preview.vim
 source ~/.vim/configs/plugins/rainbow.vim
 source ~/.vim/configs/plugins/startify.vim
 source ~/.vim/configs/plugins/vista.vim
@@ -30,3 +29,4 @@ source ~/.vim/configs/plugins/close-buffers.vim
 source ~/.vim/configs/plugins/move.vim
 source ~/.vim/configs/plugins/translator.vim
 source ~/.vim/configs/plugins/wildfire.vim
+source ~/.vim/configs/plugins/dockertools.vim

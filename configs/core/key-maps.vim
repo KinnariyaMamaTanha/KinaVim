@@ -12,7 +12,7 @@ nnoremap L $
 nnoremap Y 0
 
 " These lines fix some Alt key problems for me
-let c='a'
+let c = 'a'
 while c <= 'z'
   exec "set <A-".c.">=\e".c
   exec "imap \e".c." <A-".c.">"
@@ -82,8 +82,6 @@ nnoremap <silent> <Home> :Startify<CR>
 " no highlight search
 nnoremap <LEADER><CR> :nohlsearch<CR>
 
-" semantic highlight
-nnoremap <leader>s :SemanticHighlightToggle<CR>
 
 " =====================
 " ==== Insert Mode ====
