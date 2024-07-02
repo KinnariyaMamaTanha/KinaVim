@@ -4,7 +4,7 @@
 
 ## Features
 
-1. Full Support for C, C++, Python, markdown, html, dockerfile, cmake, assembly and viml, including auto-completion, formatting, highlighting and linting.
+1. Full Support for C, C++, Python, markdown, html, dockerfile, cmake and viml, including auto-completion, formatting, highlighting and linting.
 2. Wonderful file navigation and tag list(powered by LeaderF, coc-explorer, yazi, vista and universal-ctags).
 3. Integrated with various apps, including yazi, fzf, git and lazygit.
 4. Great English2Chinese translation.
