@@ -4,7 +4,7 @@ noremap <F5> :call RunCode()<CR>
 func! RunCode()
     exec "w"
     if &filetype == 'c'
-        silent !gcc % -g -o %< 
+        silent !gcc % -g -o %<
         redraw!
         FloatermNew --autoclose=0 ./%<
     elseif &filetype == 'cpp'

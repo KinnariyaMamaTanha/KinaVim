@@ -39,11 +39,6 @@ function! CheckBackspace() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-" Use <c-space> to trigger completion
-inoremap <silent><expr> <c-space> coc#refresh()
-" signature help in insert mode
-inoremap <silent> ,s <C-r>=CocActionAsync('showSignatureHelp')<CR>
-
 " Use `[d` and `]d` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list
 nmap <silent> [d <Plug>(coc-diagnostic-prev)
@@ -93,9 +88,9 @@ nmap rn <Plug>(coc-rename)
 " ==================
 " ==== refactor ====
 " ==================
-nmap <silent> re <Plug>(coc-codeaction-refactor)
-xmap <silent> r  <Plug>(coc-codeaction-refactor-selected)
-nmap <silent> r  <Plug>(coc-codeaction-refactor-selected)
+nmap <silent> <leader>re <Plug>(coc-codeaction-refactor)
+xmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
+nmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
 
 " ==================
 " ==== coc-yank ====

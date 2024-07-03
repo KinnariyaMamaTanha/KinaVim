@@ -30,3 +30,6 @@ source ~/.vim/configs/plugins/move.vim
 source ~/.vim/configs/plugins/translator.vim
 source ~/.vim/configs/plugins/wildfire.vim
 source ~/.vim/configs/plugins/dockertools.vim
+source ~/.vim/configs/plugins/pangu.vim
+source ~/.vim/configs/plugins/interestingwords.vim
+source ~/.vim/configs/plugins/incsearch-fuzzy.vim

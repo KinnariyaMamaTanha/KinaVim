@@ -80,7 +80,7 @@ nnoremap <C-a> ggVG
 nnoremap <silent> <Home> :Startify<CR>
 
 " no highlight search
-nnoremap <LEADER><CR> :nohlsearch<CR>
+nnoremap <LEADER><CR> :nohlsearch<CR> :call UncolorAllWords()<CR>
 
 
 " =====================

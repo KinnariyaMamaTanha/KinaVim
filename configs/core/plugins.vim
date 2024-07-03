@@ -36,6 +36,13 @@ Plug 'voldikss/vim-translator' " translator for words and paragraphs
 Plug 'gcmt/wildfire.vim'
 Plug 'wakatime/vim-wakatime' " awake time
 Plug 'kkvh/vim-docker-tools'
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
+Plug 'hotoo/pangu.vim', { 'for': ['markdown', 'text']}
+Plug 'rhysd/accelerated-jk'
+Plug 'lfv89/vim-interestingwords' " highlight current word under cursor
+Plug 'haya14busa/incsearch.vim' " dependence of incsearch-fuzzy.vim
+Plug 'haya14busa/incsearch-fuzzy.vim'
 
 
 " markdown plugin, replaced by coc-markdown-preview-enhanced
