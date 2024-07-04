@@ -68,3 +68,6 @@ syntax on
 
 " close all the windows when leaving the last buffer
 autocmd BufEnter * if 0 == len(filter(range(1, winnr('$')), 'empty(getbufvar(winbufnr(v:val), "&bt"))')) | qa! | endif
+
+" conceal level
+set conceallevel=2

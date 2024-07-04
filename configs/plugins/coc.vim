@@ -21,6 +21,7 @@ let g:coc_global_extensions = [
     \ 'coc-webview',
     \ 'coc-markdown-preview-enhanced',
     \ 'coc-html',
+    \ 'coc-todo-tree'
     \ ]
 
 " Use tab for trigger completion with characters ahead and navigate
@@ -125,3 +126,8 @@ autocmd FileType markdown let b:coc_pairs = [["$", "$"]]
 " ==== coc-markdown-preview-enhanced ====
 " =======================================
 nmap <C-m><C-k> CocCommand markdown-preview-enhanced.openPreview<CR>
+
+" =======================
+" ==== coc-todo-tree ====
+" =======================
+nmap TD :CocCommand coc-todo-tree.showTree<CR>

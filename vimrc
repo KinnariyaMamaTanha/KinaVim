@@ -33,3 +33,7 @@ source ~/.vim/configs/plugins/dockertools.vim
 source ~/.vim/configs/plugins/pangu.vim
 source ~/.vim/configs/plugins/interestingwords.vim
 source ~/.vim/configs/plugins/incsearch-fuzzy.vim
+source ~/.vim/configs/plugins/vim-markdown.vim
+source ~/.vim/configs/plugins/accelerated_jk.vim
+source ~/.vim/configs/plugins/project.vim
+source ~/.vim/configs/plugins/notes.vim

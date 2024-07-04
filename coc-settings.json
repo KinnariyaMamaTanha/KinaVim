@@ -1,4 +1,45 @@
 {
+  "todo-tree.fileIcon": {
+    "text": "",
+    "hlGroup": "Label"
+  },
+  "todo-tree.folderIcon": {
+    "text": "",
+    "hlGroup": "Label"
+  },
+  "todo-tree.previewWinConfig": {
+    "border": true,
+    "rounded": true,
+    "highlight": "String",
+    "borderhighlight": "Constant",
+    "winblend": 0
+  },
+  "todo-tree.tags": [
+    {
+      "tagName": "todo",
+      "regex": "TODO",
+      "icon": {
+        "text": "",
+        "hlGroup": "Todo"
+      }
+    },
+    {
+      "tagName": "todo",
+      "regex": "@todo",
+      "icon": {
+        "text": "",
+        "hlGroup": "Todo"
+      }
+    },
+    {
+      "tagName": "fix",
+      "regex": "FIXME",
+      "icon": {
+        "text": "",
+        "hlGroup": "Error"
+      }
+    },
+  ],
   "markdown-preview-enhanced.enableScriptExecution": true,
   "markdown-preview-enhanced.enableHTML5Embed": true,
   "markdown-preview-enhanced.enableTypographer": true,

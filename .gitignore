@@ -2,5 +2,6 @@
 /plugged
 /session
 /undo
+/vim-project-config
 # files
 /.netrwhist

@@ -11,8 +11,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-plug' " vim-plug
 Plug 'neoclide/coc.nvim', { 'branch': 'release' } " LSP client
 Plug 'honza/vim-snippets', { 'on': [] } " code snippets，dependence of coc-snippets
-Plug 'dhruvasagar/vim-table-mode', {'for': ['markdown'], 'on': 'TableModeToggle'}
-Plug 'mzlogin/vim-markdown-toc', {'for': ['markdown'], 'on': ['GenTocGFM', 'GenTocRedcarpet', 'RemoveToc']}
+Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown', 'vim-plug'], 'on': 'TableModeToggle' }
 Plug 'sheerun/vim-polyglot' " collections of highlight plugins
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' } " zen mode
 Plug 'junegunn/limelight.vim', { 'on': 'Goyo' } " better zen mode
@@ -28,7 +27,7 @@ Plug 'voldikss/vim-floaterm', { 'on': 'FloatermNew' } " floating terminal
 Plug 'vim-airline/vim-airline', { 'on': [] } " beautiful statusline
 Plug 'ryanoasis/vim-devicons', { 'on': [] } " icons for statusline
 Plug 'rhysd/clever-f.vim' " cleverer f key
-Plug 'Asheq/close-buffers.vim', {'on': 'Bdelete'}, " close hidden buffers
+Plug 'Asheq/close-buffers.vim', { 'on': 'Bdelete' }, " close hidden buffers
 Plug 'matze/vim-move' " move lines, characters up, down, left, right more quickly
 Plug 'tpope/vim-surround' " change surround brackets and so on
 Plug 'tpope/vim-repeat' " coordination with vim-surround
@@ -38,12 +37,16 @@ Plug 'wakatime/vim-wakatime' " awake time
 Plug 'kkvh/vim-docker-tools'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
-Plug 'hotoo/pangu.vim', { 'for': ['markdown', 'text']}
+Plug 'hotoo/pangu.vim', { 'for': ['markdown', 'text', 'vim-plug'] }
 Plug 'rhysd/accelerated-jk'
 Plug 'lfv89/vim-interestingwords' " highlight current word under cursor
 Plug 'haya14busa/incsearch.vim' " dependence of incsearch-fuzzy.vim
 Plug 'haya14busa/incsearch-fuzzy.vim'
-
+Plug 'preservim/vim-markdown', { 'for': ['markdown', 'vim-plug'] }
+Plug 'lambdalisue/vim-nerdfont' " beautify vim-project
+Plug 'lambdalisue/glyph-palette.vim' " colorize vim-nerdfont
+Plug 'leafOfTree/vim-project', { 'on': ['ProjectList', 'Project', 'ProjectNew'] } " Project manager
+Plug 'mayanksuman/vim-notes-markdown'
 
 " markdown plugin, replaced by coc-markdown-preview-enhanced
 " Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install', 'for': ['markdown'], 'on': 'MarkdownPreview'}  markdown preview

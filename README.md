@@ -19,27 +19,25 @@
     - python3, black
 - For C/C++:
     - gcc, g++, clangd, make, cmake(optional), cmake-format(optional)
-- For assembly:
-    - asm-lsp (using cargo)
 - fzf, yazi, lazygit(all optional but useful)
 
 ## Installation
 
 - Clone the repository.
 
-```shell
+```bash
 git clone https://github.com/KinnariyaMamaTanha/KinaVim ~/.vim
 ```
 
 - Enter vim for the first time. `vim-plug` will automatically install itself and other plugins.
 
-```shell
+```bash
 vim
 ```
 
 - Close vim and restart it again. Enter insert mode and `coc.nvim` will automatically install its extensions.
 
-```shell
+```bash
 vim ~/.vim/vimrc
 ```
 
