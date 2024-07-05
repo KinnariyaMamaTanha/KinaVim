@@ -21,7 +21,8 @@ let g:coc_global_extensions = [
     \ 'coc-webview',
     \ 'coc-markdown-preview-enhanced',
     \ 'coc-html',
-    \ 'coc-todo-tree'
+    \ 'coc-todo-tree',
+    \ 'coc-texlab',
     \ ]
 
 " Use tab for trigger completion with characters ahead and navigate
@@ -29,7 +30,7 @@ let g:coc_global_extensions = [
 " no select by `"suggest.noselect": true` in your configuration file
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config
-inoremap <silent><expr> <TAB>
+inoremap <silent><expr> <C-TAB>
       \ coc#pum#visible() ? coc#pum#next(1) :
       \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
@@ -131,3 +132,8 @@ nmap <C-m><C-k> CocCommand markdown-preview-enhanced.openPreview<CR>
 " ==== coc-todo-tree ====
 " =======================
 nmap TD :CocCommand coc-todo-tree.showTree<CR>
+
+" ====================
+" ==== coc-texlab ====
+" ====================
+nmap <leader>fs :CocCommand latex.ForwardSearch<CR>

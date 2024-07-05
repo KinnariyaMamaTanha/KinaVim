@@ -47,6 +47,7 @@ Plug 'lambdalisue/vim-nerdfont' " beautify vim-project
 Plug 'lambdalisue/glyph-palette.vim' " colorize vim-nerdfont
 Plug 'leafOfTree/vim-project', { 'on': ['ProjectList', 'Project', 'ProjectNew'] } " Project manager
 Plug 'mayanksuman/vim-notes-markdown'
+Plug 'lervag/vimtex'
 
 " markdown plugin, replaced by coc-markdown-preview-enhanced
 " Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install', 'for': ['markdown'], 'on': 'MarkdownPreview'}  markdown preview

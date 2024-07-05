@@ -17,7 +17,7 @@ snippet stl "stl lib headers"
 
 endsnippet
 
-snippet class "class definition"
+snippet class "class definition" bA
 class ${1:class-name} {
 private:
   $0
@@ -27,7 +27,7 @@ public:
 };
 endsnippet
 
-snippet struct "struct definition"
+snippet struct "struct definition" bA
 struct ${1:struct-name} {
   $0
   $1();
@@ -39,7 +39,7 @@ using namespace std;
 $0
 endsnippet
 
-snippet hd "file head"
+snippet head "file head" bA
 // /usr/bin/g++
 // --- coding: utf-8 ---
 // File Name:     `!v expand("%")`

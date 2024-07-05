@@ -1,4 +1,5 @@
 {
+  "texlab.chktex.onOpenAndSave": true,
   "todo-tree.fileIcon": {
     "text": "",
     "hlGroup": "Label"

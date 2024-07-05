@@ -37,3 +37,4 @@ source ~/.vim/configs/plugins/vim-markdown.vim
 source ~/.vim/configs/plugins/accelerated_jk.vim
 source ~/.vim/configs/plugins/project.vim
 source ~/.vim/configs/plugins/notes.vim
+source ~/.vim/configs/plugins/vimtex.vim

@@ -19,6 +19,8 @@
     - python3, black
 - For C/C++:
     - gcc, g++, clangd, make, cmake(optional), cmake-format(optional)
+- For LaTeX:
+    - texlive, texlab,zathura on WSL2(not recommended) or SumatraPDF on host Windows located at /mnt/c/Users/YourUserNameK/AppData/Local/SumatraPDF/SumatraPDF.exe(You need to replace your username in ~/.vim/configs/plugins/vimtex.vim)
 - fzf, yazi, lazygit(all optional but useful)
 
 ## Installation
