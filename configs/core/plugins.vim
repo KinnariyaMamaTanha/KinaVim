@@ -5,6 +5,7 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+
 "============================= Plugins =========================
 call plug#begin('~/.vim/plugged')
 
@@ -16,22 +17,21 @@ Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' } " better undo
 Plug 'rhysd/clever-f.vim' " cleverer f key
 Plug 'Asheq/close-buffers.vim', { 'on': 'Bdelete' }, " close hidden buffers
 Plug 'tpope/vim-repeat' " coordination with vim-surround
-Plug 'gcmt/wildfire.vim'
-Plug 'wakatime/vim-wakatime' " awake time
-Plug 'kkvh/vim-docker-tools'
+Plug 'wakatime/vim-wakatime', { 'on': [] } " awake time
+Plug 'kkvh/vim-docker-tools', { 'on': [ 'Docker', 'DockerToolsToggle', 'DockerToolsOpen', 'DockerToolsClose', 'DockerToolsSetHost' ] }
 Plug 'hotoo/pangu.vim', { 'for': [ 'markdown', 'text', 'vim-plug' ] }
-Plug 'lfv89/vim-interestingwords' " highlight current word under cursor
 Plug 'lervag/vimtex'
-Plug 'makerj/vim-pdf'
+Plug 'makerj/vim-pdf', { 'for': [ 'pdf', 'vim-plugK' ] }
 Plug 'mayanksuman/vim-notes-markdown', { 'on': ['ToDo', 'NoteSearch', 'NoteCreate', 'NoteFuzzySearch', 'NoteFolder', 'NS', 'NC', 'NFS', 'NF'] }
-Plug 'voldikss/vim-translator' " translator for words and paragraphs
+Plug 'voldikss/vim-translator', { 'on': [ 'TranslateW', 'TranslateWV' ]} " translator for words and paragraphs
+Plug 'tpope/vim-fugitive', { 'on': [ 'Git' ] }
 
 if has('nvim')
     Plug 'HiPhish/rainbow-delimiters.nvim'
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
     Plug 'navarasu/onedark.nvim'
-    Plug 'folke/tokyonight.nvim'
-    Plug 'Mofiqul/vscode.nvim'
+    Plug 'folke/tokyonight.nvim', { 'on': 'colorscheme' }
+    Plug 'Mofiqul/vscode.nvim', { 'on': 'colorscheme' }
     Plug 'nvim-tree/nvim-web-devicons'
     Plug 'nvim-lualine/lualine.nvim'
     Plug 'folke/twilight.nvim' " Together with zen-mode.nvim
@@ -46,15 +46,27 @@ if has('nvim')
     Plug 'windwp/nvim-autopairs'
     Plug 'numToStr/Comment.nvim'
     Plug 'lukas-reineke/indent-blankline.nvim'
-    Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
+    Plug 'akinsho/toggleterm.nvim', { 'tag' : '*', 'on': 'ToggleTerm' }
     Plug 'nvimdev/dashboard-nvim'
     Plug 'kylechui/nvim-surround'
     Plug 'fedepujol/move.nvim'
     Plug 'MeanderingProgrammer/markdown.nvim', { 'for': [ 'markdown', 'vim-plug' ] }
-    Plug 'mfussenegger/nvim-dap'
-    Plug 'nvim-neotest/nvim-nio'
-    Plug 'rcarriga/nvim-dap-ui'
-    Plug 'mfussenegger/nvim-dap-python'
+    let dap_filetypes = [ 'vim-plug', 'python' ]
+    Plug 'mfussenegger/nvim-dap', { 'for': dap_filetypes }
+    Plug 'nvim-neotest/nvim-nio', { 'for': dap_filetypes }
+    Plug 'rcarriga/nvim-dap-ui', { 'for': dap_filetypes }
+    Plug 'mfussenegger/nvim-dap-python', { 'for': dap_filetypes }
+    Plug 'LunarVim/bigfile.nvim'
+    " For wilder.nvim
+    function! UpdateRemotePlugins(...)
+        " Needed to refresh runtime files
+        let &rtp=&rtp
+        UpdateRemotePlugins
+    endfunction
+
+    Plug 'gelguy/wilder.nvim', { 'do': function('UpdateRemotePlugins') }
+    Plug 'FabianWirth/search.nvim', { 'on': [ 'telescope' ] }
+    Plug 'RRethy/vim-illuminate', { 'for': [ 'c', 'cpp', 'python', 'vim-plug' ]}
 else
     Plug 'KinnariyaMamaTanha/vim-startify', { 'branch': 'center' } " start menu
     Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' } " search
@@ -73,10 +85,10 @@ else
     Plug 'leafOfTree/vim-project', { 'on': [ 'ProjectList', 'Project', 'ProjectNew' ] } " Project manager
     Plug 'voldikss/vim-floaterm', { 'on': 'FloatermNew' } " floating terminal
     Plug 'Yggdroot/indentLine' " indent line
-    Plug 'tpope/vim-fugitive' " In Neovim, replaced by toggleterm
     Plug 'tpope/vim-surround' " change surround brackets and so on
     Plug 'matze/vim-move' " move lines, characters up, down, left, right more quickly
     Plug 'preservim/vim-markdown', { 'for': [ 'markdown', 'vim-plug' ] }
+    Plug 'jiangmiao/auto-pairs'
 endif
 
 " markdown plugin, replaced by coc-markdown-preview-enhanced
@@ -98,13 +110,22 @@ autocmd VimEnter *
     \|   PlugInstall --sync | q
     \| endif
 
-if !has('nvim')
 " auto load some plugin when entering insert mode
-augroup InsertEnter_auto_load
-  autocmd!
-  autocmd InsertEnter * call plug#load('vim-snippets')
-  autocmd InsertEnter * call plug#load('vim-airline')
-  autocmd InsertEnter * call plug#load('vim-devicons')
-  autocmd InsertEnter * AirlineRefresh | autocmd! InsertEnter_auto_load
-augroup END
+if !has('nvim')
+    augroup InsertEnter_auto_load
+        autocmd!
+        autocmd InsertEnter * call plug#load('vim-snippets')
+        autocmd InsertEnter * call plug#load('vim-airline')
+        autocmd InsertEnter * call plug#load('vim-devicons')
+        autocmd InsertEnter * call plug#load('vim-wakatime')
+        autocmd InsertEnter * AirlineRefresh
+        autocmd! InsertEnter_auto_load
+    augroup END
+else
+    augroup InsertEnter_auto_load
+        autocmd!
+        autocmd InsertEnter * call plug#load('vim-snippets')
+        autocmd InsertEnter * call plug#load('vim-wakatime')
+        autocmd! InsertEnter_auto_load
+    augroup END
 endif

@@ -15,9 +15,9 @@
 
 - terminal with a nerd font and 256-color
 - vim >= 9.0, with *python3, conceal, terminal, patch* support.
-- curl, git, nodejs, yarn, universal-ctags
+- curl, git, nodejs, yarn, universal-ctags, fd
 - For Python:
-    - python3, black, ipython
+    - python3, black, ipython, debugpy(for python debugging)
 - For C/C++:
     - gcc, g++, clangd, make, cmake(optional), cmake-format(optional)
 - For LaTeX:

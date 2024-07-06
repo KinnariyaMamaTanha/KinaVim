@@ -21,10 +21,8 @@ source ~/.vim/configs/plugins/coc.vim
 source ~/.vim/configs/plugins/undotree.vim
 source ~/.vim/configs/plugins/clever-f.vim
 source ~/.vim/configs/plugins/close-buffers.vim
-source ~/.vim/configs/plugins/wildfire.vim
 source ~/.vim/configs/plugins/dockertools.vim
 source ~/.vim/configs/plugins/pangu.vim
-source ~/.vim/configs/plugins/interestingwords.vim
 source ~/.vim/configs/plugins/vimtex.vim
 source ~/.vim/configs/plugins/notes.vim
 source ~/.vim/configs/plugins/translator.vim
@@ -48,7 +46,14 @@ if has('nvim')
     source ~/.vim/configs/plugins/toggleterm.vim
     source ~/.vim/configs/plugins/move.nvim.vim
     source ~/.vim/configs/plugins/markdown.nvim.vim
-    source ~/.vim/configs/plugins/dap.vim
+    source ~/.vim/configs/plugins/bigfile.vim
+    source ~/.vim/configs/plugins/wilder.vim
+    source ~/.vim/configs/plugins/search.vim
+    augroup Load_dap
+        autocmd!
+        autocmd BufEnter *.py source ~/.vim/configs/plugins/dap.vim
+        autocmd! Load_dap
+    augroup END
 else
     source ~/.vim/configs/plugins/startify.vim
     source ~/.vim/configs/plugins/floaterm.vim
