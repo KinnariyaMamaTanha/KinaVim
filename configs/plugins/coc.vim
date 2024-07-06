@@ -1,5 +1,30 @@
 
 " install coc extensions automatically when missing
+if has('nvim')
+let g:coc_global_extensions = [
+    \ 'coc-sh',
+    \ 'coc-json',
+    \ 'coc-vimlsp',
+    \ 'coc-pyright',
+    \ 'coc-clangd',
+    \ 'coc-markdownlint',
+    \ 'coc-git',
+    \ 'coc-explorer',
+    \ 'coc-floaterm',
+    \ 'coc-snippets',
+    \ 'coc-word',
+    \ 'coc-yank',
+    \ 'coc-pydocstring',
+    \ 'coc-cmake',
+    \ 'coc-docker',
+    \ 'coc-ecdict',
+    \ 'coc-webview',
+    \ 'coc-markdown-preview-enhanced',
+    \ 'coc-html',
+    \ 'coc-todo-tree',
+    \ 'coc-texlab',
+    \ ]
+else
 let g:coc_global_extensions = [
     \ 'coc-sh',
     \ 'coc-json',
@@ -24,6 +49,7 @@ let g:coc_global_extensions = [
     \ 'coc-todo-tree',
     \ 'coc-texlab',
     \ ]
+endif
 
 " Use tab for trigger completion with characters ahead and navigate
 " NOTE: There's always complete item selected by default, you may want to enable

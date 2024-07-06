@@ -19,9 +19,9 @@
 " endif
 
 " tokyonight settings
-let g:tokyonight_style = 'storm'
-let g:tokyonight_enable_italic = 1
-let g:airline_theme = 'tokyonight'
+" let g:tokyonight_style = 'storm'
+" let g:tokyonight_enable_italic = 1
+" let g:airline_theme = 'tokyonight'
 " colorscheme tokyonight
 
 " onedark settings

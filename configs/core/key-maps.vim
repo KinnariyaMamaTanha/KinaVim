@@ -51,8 +51,6 @@ nnoremap <down> :res -1<CR>
 nnoremap <left> :vertical resize +1<CR>
 nnoremap <right> :vertical resize -1<CR>
 
-" open new tabline
-nnoremap <C-t> :tabe<CR>
 " move between tablines
 nnoremap <leader>1 <Plug>AirlineSelectTab1
 nnoremap <leader>2 <Plug>AirlineSelectTab2

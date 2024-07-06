@@ -33,6 +33,7 @@ let g:vimtex_view_general_viewer = '/mnt/c/Users/自驾游/AppData/Local/Sumatra
 let g:vimtex_view_general_options = '-reuse-instance -forward-search @tex @line @pdf'
 
 let g:vimtex_cache_root = '.cache'
+let g:vimtex_cache_persistent = 1
 
 " latexmk settings
 let g:vimtex_compiler_latexmk = {

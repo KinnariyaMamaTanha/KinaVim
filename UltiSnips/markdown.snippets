@@ -11,28 +11,28 @@
 # - b 表示只有在一行的开头才会被触发。
 
 # numbered list 
-snippet nlist "numbered list with 3 rows" bA
+snippet nlist "numbered list with 3 rows" b
 1. $1
 2. $2
 3. $3
 $0
 endsnippet
 
-snippet list "unnumbered list with 3 rows" bA
+snippet list "unnumbered list with 3 rows" b
 - $1
 - $2
 - $3
 $0
 endsnippet
 
-snippet task "tasks" bA
+snippet task "tasks" b
 - [ ] $1
 - [ ] $2
 - [ ] $3
 $0
 endsnippet
 
-snippet hd "head" bA
+snippet head "head" bA
 ---
 title: ${1:title}
 layout: post
@@ -50,18 +50,18 @@ tags:
 $0
 endsnippet
 
-snippet img "image" bA
+snippet img "image" b
 ![$1]($2)
 $0
 endsnippet
 
 # markdown latex
-snippet math "math quote" bA
+snippet math "math quote" b
 $$
 $0
 $$
 endsnippet
-snippet align "aligns" bA
+snippet align "aligns" b
 \begin{align}
     $0
 \end{align}

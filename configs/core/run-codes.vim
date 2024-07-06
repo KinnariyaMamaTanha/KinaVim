@@ -17,6 +17,8 @@ func! RunCode()
         CocCommand markdown-preview-enhanced.openPreview
     elseif &filetype == 'sh'
         FloatermNew --autoclose=0 bash %
+    elseif &filetype == 'tex'
+        VimtexCompile
     endif
 endfunc
 

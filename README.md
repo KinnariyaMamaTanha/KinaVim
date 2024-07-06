@@ -1,6 +1,6 @@
 # KinaVim
 
-> My configuration of vim on ubuntu22.04(WSL2).
+> My configuration of vim/neovim on ubuntu22.04(WSL2).
 
 ## Features
 
@@ -9,6 +9,7 @@
 3. Integrated with various apps, including yazi, fzf, git and lazygit.
 4. Great English2Chinese translation.
 5. Beautiful appearance.
+6. Working well for both vim and neovim.(except for undotree plugin)
 
 ## Requirements
 
@@ -16,7 +17,7 @@
 - vim >= 9.0, with *python3, conceal, terminal, patch* support.
 - curl, git, nodejs, yarn, universal-ctags
 - For Python:
-    - python3, black
+    - python3, black, ipython
 - For C/C++:
     - gcc, g++, clangd, make, cmake(optional), cmake-format(optional)
 - For LaTeX:
@@ -24,6 +25,7 @@
 - For PDF:
     - poppler(poppler-utils)
 - fzf, yazi, lazygit(all optional but useful)
+- For Neovim users: pynvim(python module)
 
 ## Installation
 
@@ -33,13 +35,13 @@
 git clone https://github.com/KinnariyaMamaTanha/KinaVim ~/.vim
 ```
 
-- Enter vim for the first time. `vim-plug` will automatically install itself and other plugins.
+- Enter vim/neovim for the first time. `vim-plug` will automatically install itself and other plugins.
 
 ```bash
 vim
 ```
 
-- Close vim and restart it again. Enter insert mode and `coc.nvim` will automatically install its extensions.
+- Close vim/neovim and restart it again. Enter insert mode and `coc.nvim` will automatically install its extensions.
 
 ```bash
 vim ~/.vim/vimrc
@@ -47,9 +49,10 @@ vim ~/.vim/vimrc
 
 - After install all the plugins, you should:
 
-1. Place `~/.vim/plugged/onedark.vim/autoload/airline/themes/onedark.vim` in your `~/.vim/plugged/vim-airline/autoload/airline/themes/` directory
-2. Modify the source code of `vim-startify` in `~/.vim/plugged/vim-startify/autoload/startify.vim` according to the [issue](https://github.com/mhinz/vim-startify/issues/400#issuecomment-565858638)（6.9.2024: I forked the code of [mhinz/vim-startify](https://github.com/mhinz/vim-startify) and make some modifications, so now you don't need to fix the trouble manually, however, I won't develop any other functions so you may still need to switch to the original repository）
-3. Read the config to be familiar with its keymaps and functions.
+1. For **Vim** users: Place `~/.vim/plugged/onedark.vim/autoload/airline/themes/onedark.vim` in your `~/.vim/plugged/vim-airline/autoload/airline/themes/` directory
+2. For **Vim** users: modify the source code of `vim-startify` in `~/.vim/plugged/vim-startify/autoload/startify.vim` according to the [issue](https://github.com/mhinz/vim-startify/issues/400#issuecomment-565858638)（6.9.2024: I forked the code of [mhinz/vim-startify](https://github.com/mhinz/vim-startify) and make some modifications, so now you don't need to fix the trouble manually, however, I won't develop any other functions so you may still need to switch to the original repository）
+3. For **Neovim** users: create `~/.config/nvim/init.vim` and write `source ~/.vim/vimrc` to it. Then place `coc-setting.json`, `UltiSnips` folder, `ftplugin` folder to `~/.config/nvim/` directory
+4. Read the configurations to be familiar with its keymaps and functions.
 
 ## Screenshots
 

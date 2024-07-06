@@ -22,6 +22,7 @@ let g:startify_center = 50
 let g:startify_change_to_vcs_root = 1
 let g:startify_commands = [
             \ {'f': ["Find Files", "LeaderfFile"]},
+            \ {'g': ["Find Text", ":Leaderf rg"]},
             \ {'P': ['Projects', ':ProjectList']},
             \ {'t': ['TODOs', ':ToDo']},
             \ {'c': ['Configuration', ':e ~/.vim/vimrc']},
