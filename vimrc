@@ -1,5 +1,4 @@
 " Neovim config file position should be at ~/.config/nvim/init.vim
-" And coc-setting.json should be at ~/.config/nvim/coc-settings.json
 
 " Special need for polyglot
 if !has('nvim')
