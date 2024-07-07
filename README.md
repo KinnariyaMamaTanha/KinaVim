@@ -58,7 +58,7 @@ vim ~/.vim/vimrc
 
 ## Screenshots
 
-- Startup UI
+### Startup UI
 
 Vim:
 
@@ -78,7 +78,7 @@ Neovim:
 
 </details>
 
-- Fuzzy finder
+### Fuzzy finder
 
 Vim:
 
@@ -98,7 +98,7 @@ Neovim:
 
 </details>
 
-- Floating terminal(Vim only)
+### Floating terminal(Vim only)
 
 <details>
   <summary><b>view</b></summary>
@@ -107,7 +107,7 @@ Neovim:
 
 </details>
 
-- ipython integration(Vim only)
+### ipython integration(Vim only)
 
 <details>
   <summary><b>view</b></summary>
@@ -116,7 +116,7 @@ Neovim:
 
 </details>
 
-- Code space
+### Code space
 
 Vim:
 
@@ -136,7 +136,7 @@ Neovim:
 
 </details>
 
-- Undo history
+### Undo history
 
 Vim:
 
@@ -156,7 +156,7 @@ Neovim:
 
 </details>
 
-- [yazi](https://github.com/sxyazi/yazi) integration
+### [yazi](https://github.com/sxyazi/yazi) integration
 
 <details>
   <summary><b>view</b></summary>
@@ -165,7 +165,7 @@ Neovim:
 
 </details>
 
-- Git information integration
+### Git information integration
 
 Vim:
 
@@ -176,7 +176,7 @@ Vim:
 
 </details>
 
-- [lazygit](https://github.com/jesseduffield/lazygit) integration
+### [lazygit](https://github.com/jesseduffield/lazygit) integration
 
 <details>
   <summary><b>view</b></summary>
@@ -185,7 +185,7 @@ Vim:
 
 </details>
 
-- Markdown preview
+### Markdown preview
 
 Vim:
 
@@ -205,7 +205,7 @@ Neovim:
 
 </details>
 
-- Zen mode
+### Zen mode
 
 Vim:
 
@@ -225,7 +225,7 @@ Neovim:
 
 </details>
 
-- Debugging(Neovim only)
+### Debugging(Neovim only)
 
 <details>
   <summary><b>view</b></summary>
