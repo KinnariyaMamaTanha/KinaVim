@@ -1,4 +1,5 @@
-
+" Use the same coc-setting.json file for both vim and neovim
+let g:coc_config_home = '~/.vim'
 " install coc extensions automatically when missing
 let g:coc_global_extensions = [
     \ 'coc-sh',
@@ -75,6 +76,12 @@ nmap <silent> cl <Plug>(coc-codeaction-line)
 xmap <silent> ca <Plug>(coc-codeaction-selected)
 nmap <silent> ca <Plug>(coc-codeaction)
 nmap <silent> qf <Plug>(coc-fix-current)
+
+" Neovim-only settings
+if has('nvim')
+    " Focus floating windows
+    nmap <silent> <C-f> <Plug>(coc-float-jump)
+endif
 
 " ======================
 " ==== coc-explorer ====

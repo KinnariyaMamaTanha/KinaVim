@@ -23,14 +23,19 @@ end)
 
 vim.g.rainbow_delimiters = { highlight = highlight }
 require("ibl").setup({
-exclude = {
-    filetypes = { "startify", "coc-explorer", "coctree", "undotree", "toggleterm", "dashboard", "help" }
-},
-indent = {
-    char = "▏",
-    tab_char = "▏",
-},
-scope = { highlight = highlight }
+    exclude = {
+        filetypes = { "startify", "coc-explorer", "coctree", "undotree", "toggleterm", "dashboard", "help" }
+    },
+    indent = {
+        char = "▏",
+        tab_char = "▏",
+    },
+    scope = {
+        highlight = highlight,
+        enabled = true,
+        show_start = false,
+        show_end = false,
+    },
 })
 hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
 EOF

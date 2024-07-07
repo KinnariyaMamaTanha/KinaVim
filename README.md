@@ -53,7 +53,7 @@ vim ~/.vim/vimrc
 
 1. For **Vim** users: Place `~/.vim/plugged/onedark.vim/autoload/airline/themes/onedark.vim` in your `~/.vim/plugged/vim-airline/autoload/airline/themes/` directory
 2. For **Vim** users: modify the source code of `vim-startify` in `~/.vim/plugged/vim-startify/autoload/startify.vim` according to the [issue](https://github.com/mhinz/vim-startify/issues/400#issuecomment-565858638)（6.9.2024: I forked the code of [mhinz/vim-startify](https://github.com/mhinz/vim-startify) and make some modifications, so now you don't need to fix the trouble manually, however, I won't develop any other functions so you may still need to switch to the original repository）
-3. For **Neovim** users: see neovim's [Transitioning from Vim](https://neovim.io/doc/user/nvim.html#nvim-from-vim), then place `coc-settings.json` to `~/.config/nvim/` folder.
+3. For **Neovim** users: see neovim's [Transitioning from Vim](https://neovim.io/doc/user/nvim.html#nvim-from-vim).
 4. Read the configurations to be familiar with its keymaps and functions.
 
 ## Screenshots
@@ -150,7 +150,7 @@ vim ~/.vim/vimrc
 ### [yazi](https://github.com/sxyazi/yazi) integration
 
 <details>
-  <summary><b>vim and neovim</b></summary>
+  <summary><b>vim</b></summary>
 
 ![yazi](./screenshots/7.png)
 

@@ -64,7 +64,6 @@ if has('nvim')
 
     Plug 'gelguy/wilder.nvim', { 'do': function('UpdateRemotePlugins') }
     Plug 'FabianWirth/search.nvim', { 'on': [ 'telescope' ] }
-    Plug 'RRethy/vim-illuminate', { 'for': [ 'c', 'cpp', 'python', 'vim-plug' ]}
     Plug 'debugloop/telescope-undo.nvim', { 'on': [ 'Telescope' ] }
 else
     Plug 'KinnariyaMamaTanha/vim-startify', { 'branch': 'center' } " start menu
