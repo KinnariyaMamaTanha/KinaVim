@@ -60,19 +60,15 @@ vim ~/.vim/vimrc
 
 ### Startup UI
 
-Vim:
-
 <details>
-  <summary><b>view</b></summary>
+  <summary><b>vim</b></summary>
 
 ![vim](./screenshots/1.png)
 
 </details>
 
-Neovim:
-
 <details>
-  <summary><b>view</b></summary>
+  <summary><b>neovim</b></summary>
 
 ![neovim](./screenshots/13.png)
 
@@ -80,57 +76,56 @@ Neovim:
 
 ### Fuzzy finder
 
-Vim:
-
 <details>
-  <summary><b>view</b></summary>
+  <summary><b>vim</b></summary>
 
 ![vim](./screenshots/2.png)
 
 </details>
 
-Neovim:
-
 <details>
-  <summary><b>view</b></summary>
+  <summary><b>neovim</b></summary>
 
 ![Neovim](./screenshots/16.png)
 
 </details>
 
-### Floating terminal(Vim only)
+### Floating terminal
 
 <details>
-  <summary><b>view</b></summary>
+  <summary><b>vim</b></summary>
 
 ![Floaterm](./screenshots/3.png)
 
 </details>
 
-### ipython integration(Vim only)
+### ipython integration
 
 <details>
-  <summary><b>view</b></summary>
+  <summary><b>vim</b></summary>
 
-![Ipython](./screenshots/4.png)
+![vim](./screenshots/4.png)
+
+</details>
+
+<details>
+  <summary><b>neovim</b></summary>
+
+![neovim](./screenshots/19.png)
 
 </details>
 
 ### Code space
 
-Vim:
-
 <details>
-  <summary><b>view</b></summary>
+  <summary><b>vim</b></summary>
 
 ![vim](./screenshots/5.png)
 
 </details>
 
-Neovim:
-
 <details>
-  <summary><b>view</b></summary>
+  <summary><b>neovim</b></summary>
 
 ![neovim](./screenshots/14.png)
 
@@ -138,19 +133,15 @@ Neovim:
 
 ### Undo history
 
-Vim:
-
 <details>
-  <summary><b>view</b></summary>
+  <summary><b>vim</b></summary>
 
 ![vim](./screenshots/6.png)
 
 </details>
 
-Neovim:
-
 <details>
-  <summary><b>view</b></summary>
+  <summary><b>neovim</b></summary>
 
 ![Neovim](./screenshots/17.png)
 
@@ -159,7 +150,7 @@ Neovim:
 ### [yazi](https://github.com/sxyazi/yazi) integration
 
 <details>
-  <summary><b>view</b></summary>
+  <summary><b>vim and neovim</b></summary>
 
 ![yazi](./screenshots/7.png)
 
@@ -167,10 +158,8 @@ Neovim:
 
 ### Git information integration
 
-Vim:
-
 <details>
-  <summary><b>view</b></summary>
+  <summary><b>vim and neovim</b></summary>
 
 ![vim](./screenshots/8.png)
 
@@ -179,7 +168,7 @@ Vim:
 ### [lazygit](https://github.com/jesseduffield/lazygit) integration
 
 <details>
-  <summary><b>view</b></summary>
+  <summary><b>vim and neovim</b></summary>
 
 ![lazygit](./screenshots/9.png)
 
@@ -187,19 +176,15 @@ Vim:
 
 ### Markdown preview
 
-Vim:
-
 <details>
-  <summary><b>view</b></summary>
+  <summary><b>vim</b></summary>
 
 ![vim](./screenshots/10.png)
 
 </details>
 
-Neovim:
-
 <details>
-  <summary><b>view</b></summary>
+  <summary><b>neovim</b></summary>
 
 ![neovim](./screenshots/12.png)
 
@@ -207,28 +192,24 @@ Neovim:
 
 ### Zen mode
 
-Vim:
-
 <details>
-  <summary><b>view</b></summary>
+  <summary><b>vim</b></summary>
 
 ![vim](./screenshots/11.png)
 
 </details>
 
-Neovim:
-
 <details>
-  <summary><b>view</b></summary>
+  <summary><b>neovim</b></summary>
 
 ![neovim](./screenshots/18.png)
 
 </details>
 
-### Debugging(Neovim only)
+### Debugging
 
 <details>
-  <summary><b>view</b></summary>
+  <summary><b>neovim</b></summary>
 
 ![debug](./screenshots/15.png)
 
