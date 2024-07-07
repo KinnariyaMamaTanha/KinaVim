@@ -27,4 +27,4 @@ require("search").setup({
 })
 EOF
 
-nmap <F1> :lua require('search').open()<CR>
+nmap <leader>s :lua require('search').open()<CR>

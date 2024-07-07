@@ -14,9 +14,9 @@ nnoremap Y 0
 " These lines fix some Alt key problems for me
 let c = 'a'
 while c <= 'z'
-  exec "set <A-".c.">=\e".c
-  exec "imap \e".c." <A-".c.">"
-  let c = nr2char(1+char2nr(c))
+    exec "set <A-".c.">=\e".c
+    exec "imap \e".c." <A-".c.">"
+    let c = nr2char(1+char2nr(c))
 endw
 
 nnoremap <A-h> g^
@@ -52,17 +52,19 @@ nnoremap <left> :vertical resize +1<CR>
 nnoremap <right> :vertical resize -1<CR>
 
 " move between tablines
-nnoremap <leader>1 <Plug>AirlineSelectTab1
-nnoremap <leader>2 <Plug>AirlineSelectTab2
-nnoremap <leader>3 <Plug>AirlineSelectTab3
-nnoremap <leader>4 <Plug>AirlineSelectTab4
-nnoremap <leader>5 <Plug>AirlineSelectTab5
-nnoremap <leader>6 <Plug>AirlineSelectTab6
-nnoremap <leader>7 <Plug>AirlineSelectTab7
-nnoremap <leader>8 <Plug>AirlineSelectTab8
-nnoremap <leader>9 <Plug>AirlineSelectTab9
-nnoremap [t <Plug>AirlineSelectPrevTab
-nnoremap ]t <Plug>AirlineSelectNextTab
+if !has('nvim')
+    nnoremap <leader>1 <Plug>AirlineSelectTab1
+    nnoremap <leader>2 <Plug>AirlineSelectTab2
+    nnoremap <leader>3 <Plug>AirlineSelectTab3
+    nnoremap <leader>4 <Plug>AirlineSelectTab4
+    nnoremap <leader>5 <Plug>AirlineSelectTab5
+    nnoremap <leader>6 <Plug>AirlineSelectTab6
+    nnoremap <leader>7 <Plug>AirlineSelectTab7
+    nnoremap <leader>8 <Plug>AirlineSelectTab8
+    nnoremap <leader>9 <Plug>AirlineSelectTab9
+    nnoremap [t <Plug>AirlineSelectPrevTab
+    nnoremap ]t <Plug>AirlineSelectNextTab
+endif
 
 " save and quit
 nnoremap <C-s> :w<CR>
@@ -78,7 +80,7 @@ nnoremap <C-a> ggVG
 nnoremap <silent> <Home> :Startify<CR>
 
 " no highlight search
-nnoremap <LEADER><CR> :nohlsearch<CR> :call UncolorAllWords()<CR>
+nnoremap <LEADER><CR> :nohlsearch<CR>
 
 
 " =====================

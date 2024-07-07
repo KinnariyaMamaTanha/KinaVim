@@ -13,7 +13,6 @@ Plug 'junegunn/vim-plug' " vim-plug
 Plug 'neoclide/coc.nvim', { 'branch': 'release' } " LSP client
 Plug 'honza/vim-snippets', { 'on': [] } " code snippets，dependence of coc-snippets
 Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown', 'vim-plug'], 'on': 'TableModeToggle' }
-Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' } " better undo
 Plug 'rhysd/clever-f.vim' " cleverer f key
 Plug 'Asheq/close-buffers.vim', { 'on': 'Bdelete' }, " close hidden buffers
 Plug 'tpope/vim-repeat' " coordination with vim-surround
@@ -51,11 +50,10 @@ if has('nvim')
     Plug 'kylechui/nvim-surround'
     Plug 'fedepujol/move.nvim'
     Plug 'MeanderingProgrammer/markdown.nvim', { 'for': [ 'markdown', 'vim-plug' ] }
-    let dap_filetypes = [ 'vim-plug', 'python' ]
-    Plug 'mfussenegger/nvim-dap', { 'for': dap_filetypes }
-    Plug 'nvim-neotest/nvim-nio', { 'for': dap_filetypes }
-    Plug 'rcarriga/nvim-dap-ui', { 'for': dap_filetypes }
-    Plug 'mfussenegger/nvim-dap-python', { 'for': dap_filetypes }
+    Plug 'mfussenegger/nvim-dap'
+    Plug 'nvim-neotest/nvim-nio'
+    Plug 'rcarriga/nvim-dap-ui'
+    Plug 'mfussenegger/nvim-dap-python'
     Plug 'LunarVim/bigfile.nvim'
     " For wilder.nvim
     function! UpdateRemotePlugins(...)
@@ -67,6 +65,7 @@ if has('nvim')
     Plug 'gelguy/wilder.nvim', { 'do': function('UpdateRemotePlugins') }
     Plug 'FabianWirth/search.nvim', { 'on': [ 'telescope' ] }
     Plug 'RRethy/vim-illuminate', { 'for': [ 'c', 'cpp', 'python', 'vim-plug' ]}
+    Plug 'debugloop/telescope-undo.nvim', { 'on': [ 'Telescope' ] }
 else
     Plug 'KinnariyaMamaTanha/vim-startify', { 'branch': 'center' } " start menu
     Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' } " search
@@ -77,6 +76,7 @@ else
     Plug 'vim-airline/vim-airline', { 'on': [] } " beautiful statusline
     Plug 'ryanoasis/vim-devicons', { 'on': [] } " icons for statusline
     Plug 'joshdick/onedark.vim' " the second night theme
+    Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' } " better undo
     Plug 'rhysd/accelerated-jk'
     Plug 'junegunn/goyo.vim', { 'on': 'Goyo' } " zen mode
     Plug 'junegunn/limelight.vim', { 'on': 'Goyo' } " better zen mode
@@ -118,8 +118,7 @@ if !has('nvim')
         autocmd InsertEnter * call plug#load('vim-airline')
         autocmd InsertEnter * call plug#load('vim-devicons')
         autocmd InsertEnter * call plug#load('vim-wakatime')
-        autocmd InsertEnter * AirlineRefresh
-        autocmd! InsertEnter_auto_load
+        autocmd InsertEnter * AirlineRefresh | autocmd! InsertEnter_auto_load
     augroup END
 else
     augroup InsertEnter_auto_load

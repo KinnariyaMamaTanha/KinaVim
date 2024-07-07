@@ -58,7 +58,7 @@ outline_window = {
     -- retain focus on your code. If this is false, retaining focus will be
     -- enforced for :Outline/:OutlineOpen and you will not be able to have the
     -- other behaviour.
-    focus_on_open = true,
+    focus_on_open = false,
     -- Winhighlight option for outline window.
     -- See :help 'winhl'
     -- To change background color to "CustomHl" for example, use "Normal:CustomHl".
@@ -72,7 +72,7 @@ outline_items = {
     -- virtual text, for quick navigation when not focused on outline.
     -- Why? See this comment:
     -- https://github.com/simrat39/symbols-outline.nvim/issues/212#issuecomment-1793503563
-    show_symbol_lineno = false,
+    show_symbol_lineno = true,
     -- Whether to highlight the currently hovered symbol and all direct parents
     highlight_hovered_item = true,
     -- Whether to automatically set cursor location in outline to match
@@ -122,7 +122,7 @@ symbol_folding = {
 
 preview_window = {
     -- Automatically open preview of code location when navigating outline window
-    auto_preview = false,
+    auto_preview = true,
     -- Automatically open hover_symbol when opening preview (see keymaps for
     -- hover_symbol).
     -- If you disable this you can still open hover_symbol using your keymap

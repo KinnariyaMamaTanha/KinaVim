@@ -1,315 +1,316 @@
 {
-  "texlab.chktex.onOpenAndSave": true,
-  "todo-tree.fileIcon": {
-    "text": "",
-    "hlGroup": "Label"
-  },
-  "todo-tree.folderIcon": {
-    "text": "",
-    "hlGroup": "Label"
-  },
-  "todo-tree.previewWinConfig": {
-    "border": true,
-    "rounded": true,
-    "highlight": "String",
-    "borderhighlight": "Constant",
-    "winblend": 0
-  },
-  "todo-tree.tags": [
-    {
-      "tagName": "todo",
-      "regex": "TODO",
-      "icon": {
-        "text": "",
-        "hlGroup": "Todo"
-      }
+    "texlab.chktex.onOpenAndSave": true,
+    "todo-tree.fileIcon": {
+        "text": "",
+        "hlGroup": "Label"
     },
-    {
-      "tagName": "todo",
-      "regex": "@todo",
-      "icon": {
-        "text": "",
-        "hlGroup": "Todo"
-      }
+    "todo-tree.folderIcon": {
+        "text": "",
+        "hlGroup": "Label"
     },
-    {
-      "tagName": "fix",
-      "regex": "FIXME",
-      "icon": {
-        "text": "",
-        "hlGroup": "Error"
-      }
+    "todo-tree.previewWinConfig": {
+        "border": true,
+        "rounded": true,
+        "highlight": "String",
+        "borderhighlight": "Constant",
+        "winblend": 0
     },
-  ],
-  "markdown-preview-enhanced.enableScriptExecution": true,
-  "markdown-preview-enhanced.enableHTML5Embed": true,
-  "markdown-preview-enhanced.enableTypographer": true,
-  "markdown-preview-enhanced.mathjaxV3ScriptSrc": "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js",
-  "git.virtualTextPrefix": " ",
-  "git.addGBlameToVirtualText": false,
-  "git.showCommitInFloating": true,
-  "git.floatConfig": {
-    "border": true,
-    "rounded": true,
-    "title": "Commit Info",
-  },
-  "coc.preferences.extensionUpdateCheck": "daily",
-  "coc.preferences.enableMessageDialog": true,
-  "coc.preferences.enableLinkedEditing": true,
-  "coc.preferences.formatOnSave": true,
-  "coc.preferences.currentFunctionSymbolAutoUpdate": true,
-  "coc.source.word.shortcut": "Word",
-  "suggest.noselect": true,
-  "suggest.enablePreselect": false,
-  "suggest.completionItemKindLabels": {
-    "class": "\ueb5b",
-    "color": "\ue22b",
-    "constant": "\ueb5d",
-    "default": "\ue64e",
-    "enum": "\uf435",
-    "enumMember": "\uea95",
-    "event": "\uea86",
-    "field": "\ueb5f",
-    "file": "\uea7b",
-    "folder": "\uea83",
-    "function": "\udb80\ude95",
-    "interface": "\ueb61",
-    "keyword": "\ueb62",
-    "method": "\uea8c",
-    "module": "\udb81\udd73",
-    "operator": "\ueb64",
-    "property": "\ueb65",
-    "reference": "\ueb36",
-    "snippet": "\ueb66",
-    "struct": "\uea91",
-    "text": "\ue612",
-    "typeParameter": "\uebba",
-    "unit": "\udb81\udeaf",
-    "value": "\uf89f",
-    "variable": "\uea88"
-  },
-  "suggest.virtualText": false,
-  "diagnostic.errorSign": "\uf467",
-  "diagnostic.warningSign": "\uf071",
-  "diagnostic.infoSign": "\uea74",
-  "diagnostic.hintSign": "\ueb32",
-  "diagnostic.checkCurrentLine": true,
-  "diagnostic.format": "%message (%source)",
-  "diagnostic.virtualTextPrefix": " ❯❯❯ ",
-  "diagnostic.virtualText": false,
-  "diagnostic.virtualTextFormat": "%message (%source)",
-  "diagnostic.messageDelay": 10,
-  "diagnostic.virtualTextLineSeparator": " \\ ",
-  "diagnostic.virtualTextLimitInOneLine": 2,
-  "codeLens.enable": true,
-  "links.highlight": true,
-  "explorer.datetime.format": "yy/MM/dd HH:mm:ss",
-  "explorer.file.reveal.auto": true,
-  "explorer.width": 30,
-  "explorer.sources": [
-    {
-      "name": "bookmark",
-      "expand": false
+    "todo-tree.tags": [
+        {
+            "tagName": "todo",
+            "regex": "TODO",
+            "icon": {
+                "text": "",
+                "hlGroup": "Todo"
+            }
+        },
+        {
+            "tagName": "todo",
+            "regex": "@todo",
+            "icon": {
+                "text": "",
+                "hlGroup": "Todo"
+            }
+        },
+        {
+            "tagName": "fix",
+            "regex": "FIXME",
+            "icon": {
+                "text": "",
+                "hlGroup": "Error"
+            }
+        },
+    ],
+    "markdown-preview-enhanced.enableScriptExecution": true,
+    "markdown-preview-enhanced.enableHTML5Embed": true,
+    "markdown-preview-enhanced.enableTypographer": true,
+    "markdown-preview-enhanced.mathjaxV3ScriptSrc": "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js",
+    "git.virtualTextPrefix": " ",
+    "git.addGBlameToVirtualText": false,
+    "git.showCommitInFloating": true,
+    "git.floatConfig": {
+        "border": true,
+        "rounded": true,
+        "title": "Commit Info",
     },
-    {
-      "name": "buffer",
-      "expand": false
+    "coc.preferences.extensionUpdateCheck": "daily",
+    "coc.preferences.enableMessageDialog": true,
+    "coc.preferences.enableLinkedEditing": true,
+    "coc.preferences.formatOnSave": true,
+    "coc.preferences.currentFunctionSymbolAutoUpdate": true,
+    "coc.source.word.shortcut": "Word",
+    "suggest.noselect": true,
+    "suggest.enablePreselect": false,
+    "suggest.completionItemKindLabels": {
+        "class": "\ueb5b",
+        "color": "\ue22b",
+        "constant": "\ueb5d",
+        "default": "\ue64e",
+        "enum": "\uf435",
+        "enumMember": "\uea95",
+        "event": "\uea86",
+        "field": "\ueb5f",
+        "file": "\uea7b",
+        "folder": "\uea83",
+        "function": "\udb80\ude95",
+        "interface": "\ueb61",
+        "keyword": "\ueb62",
+        "method": "\uea8c",
+        "module": "\udb81\udd73",
+        "operator": "\ueb64",
+        "property": "\ueb65",
+        "reference": "\ueb36",
+        "snippet": "\ueb66",
+        "struct": "\uea91",
+        "text": "\ue612",
+        "typeParameter": "\uebba",
+        "unit": "\udb81\udeaf",
+        "value": "\uf89f",
+        "variable": "\uea88"
     },
-    {
-      "name": "file",
-      "expand": true
-    }
-  ],
-  "explorer.file.showHiddenFiles": true,
-  "explorer.icon.enableNerdfont": true,
-  "explorer.icon.link": "→",
-  "explorer.previewAction.onHover": "labeling",
-  "explorer.keyMappings.global": {
-    "O": [
-      "wait",
-      "expanded?",
-      "collapse:recursive",
-      "expand:recursive"
+    "suggest.virtualText": false,
+    "diagnostic.errorSign": "\uf467",
+    "diagnostic.warningSign": "\uf071",
+    "diagnostic.infoSign": "\uea74",
+    "diagnostic.hintSign": "\ueb32",
+    "diagnostic.checkCurrentLine": true,
+    "diagnostic.format": "%message (%source)",
+    "diagnostic.virtualTextPrefix": " ❯❯❯ ",
+    "diagnostic.virtualText": false,
+    "diagnostic.virtualTextFormat": "%message (%source)",
+    "diagnostic.messageDelay": 10,
+    "diagnostic.virtualTextLineSeparator": " \\ ",
+    "diagnostic.virtualTextLimitInOneLine": 2,
+    "codeLens.enable": true,
+    "links.highlight": true,
+    "explorer.focus": false,
+    "explorer.datetime.format": "yy/MM/dd HH:mm:ss",
+    "explorer.file.reveal.auto": true,
+    "explorer.width": 30,
+    "explorer.sources": [
+        {
+            "name": "bookmark",
+            "expand": false
+        },
+        {
+            "name": "buffer",
+            "expand": false
+        },
+        {
+            "name": "file",
+            "expand": true
+        }
     ],
-    "a": "addFile",
-    "A": "addDirectory",
-    "rn": "rename",
-    "yp": "copyFilepath",
-    "yn": "copyFilename",
-    "yy": "copyFile",
-    "dd": "cutFile",
-    "pp": "pasteFile",
-    "d": "delete",
-    "D": "deleteForever",
-    "<c-o>": "noop",
-    "*": "toggleSelection",
-    "<tab>": "actionMenu",
-    "gk": [
-      "normal:k"
+    "explorer.file.showHiddenFiles": true,
+    "explorer.icon.enableNerdfont": true,
+    "explorer.icon.link": "→",
+    "explorer.previewAction.onHover": "labeling",
+    "explorer.keyMappings.global": {
+        "O": [
+            "wait",
+            "expanded?",
+            "collapse:recursive",
+            "expand:recursive"
+        ],
+        "a": "addFile",
+        "A": "addDirectory",
+        "rn": "rename",
+        "yp": "copyFilepath",
+        "yn": "copyFilename",
+        "yy": "copyFile",
+        "dd": "cutFile",
+        "pp": "pasteFile",
+        "d": "delete",
+        "D": "deleteForever",
+        "<c-o>": "noop",
+        "*": "toggleSelection",
+        "<tab>": "actionMenu",
+        "gk": [
+            "normal:k"
+        ],
+        "gj": [
+            "noop"
+        ],
+        "h": [
+            "wait",
+            "expandable?",
+            "collapse",
+            [
+                "expandabelPrev",
+                "collapse"
+            ]
+        ],
+        "l": [
+            "wait",
+            "expandable?",
+            "expand",
+            "noop"
+        ],
+        "J": [
+            "wait",
+            "toggleSelection",
+            "normal:j"
+        ],
+        "K": [
+            "wait",
+            "toggleSelection",
+            "normal:k"
+        ],
+        "gl": "noop",
+        "gh": "noop",
+        "<2-LeftMouse>": [
+            "expandable?",
+            [
+                "expanded?",
+                "collapse",
+                "expand"
+            ],
+            "open"
+        ],
+        "o": [
+            "wait",
+            "expandable?",
+            [
+                "expanded?",
+                "noop",
+                "expand"
+            ],
+            "open"
+        ],
+        "<cr>": [
+            "wait",
+            "expandable?",
+            "cd",
+            "open"
+        ],
+        "e": "noop",
+        "os": "open:split",
+        "OS": "open:vsplit",
+        "E": "noop",
+        "t": "open:tab",
+        "<bs>": "noop",
+        "P": [
+            "expandable?",
+            "gotoParent",
+            [
+                "expandablePrev",
+                "gotoParent"
+            ]
+        ],
+        "gs": [
+            "wait",
+            "reveal:select"
+        ],
+        "il": "preview:labeling",
+        "ic": "preview:content",
+        "Il": "previewOnHover:toggle:labeling",
+        "Ic": "previewOnHover:toggle:content",
+        "II": "previewOnHover:disable",
+        "zh": "toggleHidden",
+        "g<dot>": "toggleHidden",
+        "R": "refresh",
+        "?": "help",
+        "q": "quit",
+        "<esc>": "esc",
+        "X": "systemExecute",
+        "gd": "listDrive",
+        "f": "search",
+        "F": "search:recursive",
+        "gf": "gotoSource:file",
+        "gb": "gotoSource:buffer",
+        "[[": [
+            "wait",
+            "sourcePrev"
+        ],
+        "]]": [
+            "wait",
+            "sourceNext"
+        ],
+        "[i": [
+            "wait",
+            "indentPrev"
+        ],
+        "]i": [
+            "wait",
+            "indentNext"
+        ],
+        "[m": [
+            "wait",
+            "markPrev:modified"
+        ],
+        "]m": [
+            "wait",
+            "markNext:modified"
+        ],
+        "[d": [
+            "wait",
+            "markPrev:diagnosticError:diagnosticWarning"
+        ],
+        "]d": [
+            "wait",
+            "markNext:diagnosticError:diagnosticWarning"
+        ],
+        "[D": [
+            "wait",
+            "markPrev:diagnosticError"
+        ],
+        "]D": [
+            "wait",
+            "markNext:diagnosticError"
+        ],
+        "[c": [
+            "wait",
+            "markPrev:git"
+        ],
+        "]c": [
+            "wait",
+            "markNext:git"
+        ],
+        "<<": "gitStage",
+        ">>": "gitUnstage"
+    },
+    "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.formatting.provider": "black",
+    "python.linting.pycodestyleEnabled": true,
+    "python.linting.pydocstyleEnabled": true,
+    "pyright.testing.provider": "pytest",
+    "pydocstring.enableFileAction": true,
+    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/clangd_17.0.3/bin/clangd",
+    "inlayHint.display": false,
+    "markdownlint.onChange": false,
+    "markdownlint.config": {
+        "default": true,
+        "line_length": false,
+        "indentation": false,
+        "no-inline-html": false
+    },
+    "yank.highlight.duration": 200,
+    "workspace.rootPatterns": [
+        ".git",
+        ".hg",
+        ".projections.json",
+        ".vscode"
     ],
-    "gj": [
-      "noop"
-    ],
-    "h": [
-      "wait",
-      "expandable?",
-      "collapse",
-      [
-        "expandabelPrev",
-        "collapse"
-      ]
-    ],
-    "l": [
-      "wait",
-      "expandable?",
-      "expand",
-      "noop"
-    ],
-    "J": [
-      "wait",
-      "toggleSelection",
-      "normal:j"
-    ],
-    "K": [
-      "wait",
-      "toggleSelection",
-      "normal:k"
-    ],
-    "gl": "noop",
-    "gh": "noop",
-    "<2-LeftMouse>": [
-      "expandable?",
-      [
-        "expanded?",
-        "collapse",
-        "expand"
-      ],
-      "open"
-    ],
-    "o": [
-      "wait",
-      "expandable?",
-      [
-        "expanded?",
-        "noop",
-        "expand"
-      ],
-      "open"
-    ],
-    "<cr>": [
-      "wait",
-      "expandable?",
-      "cd",
-      "open"
-    ],
-    "e": "noop",
-    "os": "open:split",
-    "OS": "open:vsplit",
-    "E": "noop",
-    "t": "open:tab",
-    "<bs>": "noop",
-    "P": [
-      "expandable?",
-      "gotoParent",
-      [
-        "expandablePrev",
-        "gotoParent"
-      ]
-    ],
-    "gs": [
-      "wait",
-      "reveal:select"
-    ],
-    "il": "preview:labeling",
-    "ic": "preview:content",
-    "Il": "previewOnHover:toggle:labeling",
-    "Ic": "previewOnHover:toggle:content",
-    "II": "previewOnHover:disable",
-    "zh": "toggleHidden",
-    "g<dot>": "toggleHidden",
-    "R": "refresh",
-    "?": "help",
-    "q": "quit",
-    "<esc>": "esc",
-    "X": "systemExecute",
-    "gd": "listDrive",
-    "f": "search",
-    "F": "search:recursive",
-    "gf": "gotoSource:file",
-    "gb": "gotoSource:buffer",
-    "[[": [
-      "wait",
-      "sourcePrev"
-    ],
-    "]]": [
-      "wait",
-      "sourceNext"
-    ],
-    "[i": [
-      "wait",
-      "indentPrev"
-    ],
-    "]i": [
-      "wait",
-      "indentNext"
-    ],
-    "[m": [
-      "wait",
-      "markPrev:modified"
-    ],
-    "]m": [
-      "wait",
-      "markNext:modified"
-    ],
-    "[d": [
-      "wait",
-      "markPrev:diagnosticError:diagnosticWarning"
-    ],
-    "]d": [
-      "wait",
-      "markNext:diagnosticError:diagnosticWarning"
-    ],
-    "[D": [
-      "wait",
-      "markPrev:diagnosticError"
-    ],
-    "]D": [
-      "wait",
-      "markNext:diagnosticError"
-    ],
-    "[c": [
-      "wait",
-      "markPrev:git"
-    ],
-    "]c": [
-      "wait",
-      "markNext:git"
-    ],
-    "<<": "gitStage",
-    ">>": "gitUnstage"
-  },
-  "python.analysis.diagnosticMode": "workspace",
-  "python.analysis.typeCheckingMode": "basic",
-  "python.formatting.provider": "black",
-  "python.linting.pycodestyleEnabled": true,
-  "python.linting.pydocstyleEnabled": true,
-  "pyright.testing.provider": "pytest",
-  "pydocstring.enableFileAction": true,
-  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/clangd_17.0.3/bin/clangd",
-  "inlayHint.display": false,
-  "markdownlint.onChange": false,
-  "markdownlint.config": {
-    "default": true,
-    "line_length": false,
-    "indentation": false,
-    "no-inline-html": false
-  },
-  "yank.highlight.duration": 200,
-  "workspace.rootPatterns": [
-    ".git",
-    ".hg",
-    ".projections.json",
-    ".vscode"
-  ],
-  "list.floatPreview": true,
+    "list.floatPreview": true,
 }

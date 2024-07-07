@@ -37,12 +37,54 @@ local lazygit = Terminal:new({
         vim.api.nvim_buf_set_keymap(term.bufnr, "n", "q", "<cmd>close<CR>", {noremap = true, silent = true})
     end,
 })
+local yazi = Terminal:new({
+    cmd = "yazi",
+    hidden = true,
+    direction = 'float',
+    on_open = function(term)
+        vim.cmd("startinsert!")
+        vim.api.nvim_buf_set_keymap(term.bufnr, "n", "q", "<cmd>close<CR>", {noremap = true, silent = true})
+    end,
+})
+local ipython = Terminal:new({
+    cmd = "ipython",
+    hidden = true,
+    size = vim.o.columns * 0.5,
+    direction = 'horizontal',
+    on_open = function(term)
+        vim.cmd("startinsert!")
+        vim.api.nvim_buf_set_keymap(term.bufnr, "n", "q", "<cmd>close<CR>", {noremap = true, silent = true})
+    end,
+})
+local python = Terminal:new({
+    cmd = "python",
+    hidden = true,
+    direction = 'horizontal',
+    on_open = function(term)
+        vim.cmd("startinsert!")
+        vim.api.nvim_buf_set_keymap(term.bufnr, "n", "q", "<cmd>close<CR>", {noremap = true, silent = true})
+    end,
+})
 
 function _lazygit_toggle()
   lazygit:toggle()
 end
+
+function _yazi_toggle()
+  yazi:toggle()
+end
+
+function _ipython_toggle()
+  ipython:toggle()
+end
+
+function _python_toggle()
+  python:toggle()
+end
+
 EOF
 
 command! LazyGit lua _lazygit_toggle()
-command! Ipython TermExec cmd="ipython"
-command! Python TermExec cmd="python3"
+command! Ipython lua _ipython_toggle()
+command! Python lua _python_toggle()
+command! Yazi lua _yazi_toggle()

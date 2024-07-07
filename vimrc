@@ -1,3 +1,6 @@
+" Neovim config file position should be at ~/.config/nvim/init.vim
+" And coc-setting.json should be at ~/.config/nvim/coc-settings.json
+
 " Special need for polyglot
 if !has('nvim')
     source ~/.vim/configs/plugins/polyglot.vim
@@ -18,7 +21,6 @@ endif
 " plugin settings
 " ===============
 source ~/.vim/configs/plugins/coc.vim
-source ~/.vim/configs/plugins/undotree.vim
 source ~/.vim/configs/plugins/clever-f.vim
 source ~/.vim/configs/plugins/close-buffers.vim
 source ~/.vim/configs/plugins/dockertools.vim
@@ -39,7 +41,6 @@ if has('nvim')
     source ~/.vim/configs/plugins/dropbar.vim
     source ~/.vim/configs/plugins/bufferline.vim
     source ~/.vim/configs/plugins/code-runner.vim
-    source ~/.vim/configs/plugins/magma.vim
     source ~/.vim/configs/plugins/nvim-autopairs.vim
     source ~/.vim/configs/plugins/comment.vim
     source ~/.vim/configs/plugins/indent-blackline.vim
@@ -49,12 +50,10 @@ if has('nvim')
     source ~/.vim/configs/plugins/bigfile.vim
     source ~/.vim/configs/plugins/wilder.vim
     source ~/.vim/configs/plugins/search.vim
-    augroup Load_dap
-        autocmd!
-        autocmd BufEnter *.py source ~/.vim/configs/plugins/dap.vim
-        autocmd! Load_dap
-    augroup END
+    source ~/.vim/configs/plugins/telescope-undo.vim
+    source ~/.vim/configs/plugins/dap.vim
 else
+    source ~/.vim/configs/plugins/undotree.vim
     source ~/.vim/configs/plugins/startify.vim
     source ~/.vim/configs/plugins/floaterm.vim
     source ~/.vim/configs/plugins/indentline.vim

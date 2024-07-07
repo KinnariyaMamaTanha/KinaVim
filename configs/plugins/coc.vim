@@ -22,6 +22,7 @@ let g:coc_global_extensions = [
     \ 'coc-html',
     \ 'coc-todo-tree',
     \ 'coc-texlab',
+    \ 'coc-lua',
     \ ]
 
 " Use tab for trigger completion with characters ahead and navigate

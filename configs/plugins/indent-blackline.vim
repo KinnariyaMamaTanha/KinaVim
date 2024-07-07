@@ -26,7 +26,7 @@ require("ibl").setup({
 exclude = {
     filetypes = { "startify", "coc-explorer", "coctree", "undotree", "toggleterm", "dashboard", "help" }
 },
-indent = { 
+indent = {
     char = "▏",
     tab_char = "▏",
 },
