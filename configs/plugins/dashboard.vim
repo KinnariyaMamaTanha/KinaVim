@@ -412,7 +412,7 @@ local opts = {
                 desc_hl = "String",
                 icon = "󰮗 ",
                 icon_hl = "Title",
-                key = "C",
+                key = "c",
                 key_hl = "Number"
             },
             {
@@ -430,7 +430,7 @@ local opts = {
                 desc_hl = "String",
                 icon = " ",
                 icon_hl = "Title",
-                key = "P",
+                key = "p",
                 key_hl = "Number"
             },
             {
@@ -448,7 +448,7 @@ local opts = {
                 desc_hl = "String",
                 icon = " ",
                 icon_hl = "Title",
-                key = "c",
+                key = "C",
                 key_hl = "Number"
             },
             {
@@ -457,7 +457,7 @@ local opts = {
                 desc_hl = "String",
                 icon = " ",
                 icon_hl = "Title",
-                key = "p",
+                key = "P",
                 key_hl = "Number"
             },
             {
