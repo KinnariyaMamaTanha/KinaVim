@@ -10,12 +10,10 @@ let g:coc_global_extensions = [
     \ 'coc-markdownlint',
     \ 'coc-git',
     \ 'coc-explorer',
-    \ 'coc-floaterm',
     \ 'coc-snippets',
     \ 'coc-word',
     \ 'coc-yank',
     \ 'coc-pydocstring',
-    \ 'coc-cmake',
     \ 'coc-docker',
     \ 'coc-ecdict',
     \ 'coc-webview',
@@ -80,7 +78,7 @@ nmap <silent> qf <Plug>(coc-fix-current)
 " Neovim-only settings
 if has('nvim')
     " Focus floating windows
-    nmap <silent> <C-f> <Plug>(coc-float-jump)
+    nmap <silent> <A-f> <Plug>(coc-float-jump)
 endif
 
 " ======================

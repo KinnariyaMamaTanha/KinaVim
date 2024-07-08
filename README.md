@@ -17,15 +17,21 @@
 - vim >= 9.0, with *python3, conceal, terminal, patch* support.
 - curl, git, nodejs, yarn, universal-ctags(Vim only), fd
 - For Python:
-    - python3, black(for formatting), ipython, debugpy(for debugging)
+    - python3, black[^1] [^2](for formatting), ipython, debugpy[^1] [^2](for debugging)
 - For C/C++:
-    - gcc, g++, clangd, make, cmake(optional), cmake-format(optional)
+    - gcc, g++, clangd[^1], make, cmake, cmake-format[^1], cmake-language-server[^1] [^2], codelldb(for debugging)[^1]
 - For LaTeX:
-    - texlive, texlab, zathura on WSL2(not recommended) or SumatraPDF on host Windows located at /mnt/c/Users/YourUserName/AppData/Local/SumatraPDF/SumatraPDF.exe(You need to replace your username in ~/.vim/configs/plugins/vimtex.vim)
+    - texlive, texlab[^1] [^3], zathura on WSL2(not recommended) or SumatraPDF on host Windows located at /mnt/c/Users/YourUserName/AppData/Local/SumatraPDF/SumatraPDF.exe(You need to replace your username in ~/.vim/configs/plugins/vimtex.vim)
+- For Assembly:
+    - asm-lsp[^1], asmfmt[^1]
 - For PDF:
-    - poppler(poppler-utils)
+    - poppler(poppler-utils), pdftotext[^2]
 - fzf, yazi, lazygit(all optional but useful)
 - For Neovim users: pynvim(python module)
+
+[^1]: If using Neovim, can be installed with mason.nvim
+[^2]: Can be installed with pip or conda
+[^3]: Can be installed with cargo
 
 ## Installation
 
@@ -54,7 +60,8 @@ vim ~/.vim/vimrc
 1. For **Vim** users: Place `~/.vim/plugged/onedark.vim/autoload/airline/themes/onedark.vim` in your `~/.vim/plugged/vim-airline/autoload/airline/themes/` directory
 2. For **Vim** users: modify the source code of `vim-startify` in `~/.vim/plugged/vim-startify/autoload/startify.vim` according to the [issue](https://github.com/mhinz/vim-startify/issues/400#issuecomment-565858638)（6.9.2024: I forked the code of [mhinz/vim-startify](https://github.com/mhinz/vim-startify) and make some modifications, so now you don't need to fix the trouble manually, however, I won't develop any other functions so you may still need to switch to the original repository）
 3. For **Neovim** users: see neovim's [Transitioning from Vim](https://neovim.io/doc/user/nvim.html#nvim-from-vim).
-4. Read the configurations to be familiar with its keymaps and functions.
+4. For **Neovim** users: add `export PATH="$PATH:$HOME/.local/share/nvim/mason/bin` to your `.bashrc` or `.zshrc` or so, then install LSPs, DAPs, etcs with mason.nvim.
+5. Read the configurations to be familiar with its keymaps and functions.
 
 ## Screenshots
 

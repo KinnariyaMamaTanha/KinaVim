@@ -51,6 +51,8 @@ if has('nvim')
     source ~/.vim/configs/plugins/search.vim
     source ~/.vim/configs/plugins/telescope-undo.vim
     source ~/.vim/configs/plugins/dap.vim
+    source ~/.vim/configs/plugins/mason.vim
+    source ~/.vim/configs/plugins/conform.vim
 else
     source ~/.vim/configs/plugins/undotree.vim
     source ~/.vim/configs/plugins/startify.vim

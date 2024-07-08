@@ -1,4 +1,26 @@
 {
+    "languageserver": {
+        "asm-lsp": {
+            "command": "asm-lsp",
+            "filetypes": [
+                "asm",
+                "s",
+                "S"
+            ]
+        },
+        "cmake": {
+            "command": "cmake-language-server",
+            "filetypes": [
+                "cmake"
+            ],
+            "rootPatterns": [
+                "build/"
+            ],
+            "initializationOptions": {
+                "buildDirectory": "build"
+            }
+        }
+    },
     "signature.floatConfig": {
         "winblend": 20
     },
@@ -316,7 +338,6 @@
     "python.linting.pydocstyleEnabled": true,
     "pyright.testing.provider": "pytest",
     "pydocstring.enableFileAction": true,
-    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/clangd_17.0.3/bin/clangd",
     "inlayHint.display": false,
     "markdownlint.onChange": false,
     "markdownlint.config": {

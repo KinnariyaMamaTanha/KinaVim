@@ -1,5 +1,6 @@
 " auto install vim-plug
-let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+" let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+let data_dir = '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
     silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
@@ -12,7 +13,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-plug' " vim-plug
 Plug 'neoclide/coc.nvim', { 'branch': 'release' } " LSP client
 Plug 'honza/vim-snippets', { 'on': [] } " code snippets，dependence of coc-snippets
-Plug 'dhruvasagar/vim-table-mode', { 'for': ['markdown', 'vim-plug'], 'on': 'TableModeToggle' }
+Plug 'dhruvasagar/vim-table-mode', { 'for': [ 'markdown', 'vim-plug'], 'on': 'TableModeToggle' }
 Plug 'rhysd/clever-f.vim' " cleverer f key
 Plug 'Asheq/close-buffers.vim', { 'on': 'Bdelete' }, " close hidden buffers
 Plug 'tpope/vim-repeat' " coordination with vim-surround
@@ -65,6 +66,8 @@ if has('nvim')
     Plug 'gelguy/wilder.nvim', { 'do': function('UpdateRemotePlugins') }
     Plug 'FabianWirth/search.nvim', { 'on': [ 'telescope' ] }
     Plug 'debugloop/telescope-undo.nvim', { 'on': [ 'Telescope' ] }
+    Plug 'williamboman/mason.nvim', { 'on': [ 'Mason', 'MasonInstall', 'MasonUninstall', 'MasonUpdate' ]}
+    Plug 'stevearc/conform.nvim'
 else
     Plug 'KinnariyaMamaTanha/vim-startify', { 'branch': 'center' } " start menu
     Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' } " search

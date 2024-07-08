@@ -461,6 +461,15 @@ local opts = {
                 key_hl = "Number"
             },
             {
+                action = 'edit ~/.vim/README.md',
+                desc = " README",
+                desc_hl = "String",
+                icon = " ",
+                icon_hl = "Title",
+                key = "R",
+                key_hl = "Number"
+            },
+            {
                 action = function() vim.api.nvim_input("<cmd>qa<cr>") end,
                 desc = " Quit",
                 desc_hl = "String",
