@@ -14,8 +14,8 @@
 ## Requirements
 
 - terminal with a nerd font and 256-color
-- vim >= 9.0, with *python3, conceal, terminal, patch* support.
-- curl, git, nodejs, yarn, universal-ctags(Vim only), fd
+- vim >= 9.0, with *python3, conceal, terminal, patch* support; **OR** neovim(I am using 0.10 now).
+- curl, git, nodejs, yarn, universal-ctags, fd
 - For Python:
     - python3, black[^1] [^2](for formatting), ipython, debugpy[^1] [^2](for debugging)
 - For C/C++:
@@ -26,8 +26,10 @@
     - asm-lsp[^1], asmfmt[^1]
 - For PDF:
     - poppler(poppler-utils) or pdftotext[^2]
+- For sqlite:
+    - sqlite3
 - fzf, yazi, lazygit(all optional but useful)
-- For Neovim users: pynvim(python module)
+- For Neovim users: pynvim(python module)[^2]
 
 [^1]: If using Neovim, can be installed with mason.nvim
 [^2]: Can be installed with pip or conda
@@ -61,7 +63,8 @@ vim ~/.vim/vimrc
 2. For **Vim** users: modify the source code of `vim-startify` in `~/.vim/plugged/vim-startify/autoload/startify.vim` according to the [issue](https://github.com/mhinz/vim-startify/issues/400#issuecomment-565858638)（6.9.2024: I forked the code of [mhinz/vim-startify](https://github.com/mhinz/vim-startify) and make some modifications, so now you don't need to fix the trouble manually, however, I won't develop any other functions so you may still need to switch to the original repository）
 3. For **Neovim** users: see neovim's [Transitioning from Vim](https://neovim.io/doc/user/nvim.html#nvim-from-vim).
 4. For **Neovim** users: add `export PATH="$PATH:$HOME/.local/share/nvim/mason/bin` to your `.bashrc` or `.zshrc` or so, then install LSPs, DAPs, etcs with mason.nvim.
-5. Read the configurations to be familiar with its keymaps and functions.
+5. If you have a [wakatime](https://wakatime.com/) account, you should also set up wakatime plugin according to [vim-wakatime](https://github.com/wakatime/vim-wakatime).
+6. Read the configurations to be familiar with its keymaps and functions.
 
 ## Plugins
 
@@ -83,6 +86,7 @@ vim ~/.vim/vimrc
 - [mayanksuman/vim-notes-markdown](https://github.com/mayanksuman/vim-notes-markdown)
 - [voldikss/vim-translator](https://github.com/voldikss/vim-translator)
 - [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
+- [dstein64/vim-startuptime](https://github.com/dstein64/vim-startuptime)
 
 <details>
   <summary><b>coc.nvim plugins</b></summary>
@@ -149,6 +153,10 @@ vim ~/.vim/vimrc
 - [debugloop/telescope-undo.nvim](https://github.com/debugloop/telescope-undo.nvim)
 - [williamboman/mason.nvim](https://github.com/williamboman/mason.nvim)
 - [stevearc/conform.nvim](https://github.com/stevearc/conform.nvim)
+- [kkharji/sqlite.lua](https://github.com/kkharji/sqlite.lua)
+- [VidocqH/data-viewer.nvim](https://github.com/VidocqH/data-viewer.nvim)
+- [jamestthompson3/nvim-remote-containers](https://github.com/jamestthompson3/nvim-remote-containers)
+- [folke/trouble.nvim](https://github.com/folke/trouble.nvim)
 
 </details>
 
@@ -177,15 +185,19 @@ vim ~/.vim/vimrc
 - [matze/vim-move](https://github.com/matze/vim-move)
 - [preservim/vim-markdown](https://github.com/preservim/vim-markdown)
 - [jiangmiao/auto-pairs](https://github.com/jiangmiao/auto-pairs)
+- [github/copilot.vim](https://github.com/github/copilot.vim)
 
 </details>
 
 ## Future Plans
 
-- Better support for makefile, cmake and docker.
-- Editing and running jupyter notebook inside neovim.
-- Support Python venv(especially conda) (de)activating and changing without leaving neovim/vim.
-- Better using experience
+- [ ] Add support for sql
+- [x] Integration with copilot (for neovim)
+- [ ] Add support for remote development
+- [ ] Better support for makefile, cmake and docker.
+- [ ] Editing and running jupyter notebook inside neovim.
+- [ ] Support Python venv(especially conda) (de)activating and changing without leaving neovim/vim.
+- [ ] Better user experience
 
 ## Screenshots
 

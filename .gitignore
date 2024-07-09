@@ -3,6 +3,7 @@
 /session
 /undo
 /vim-project-config
+/projects.nvim
 /.cache
 # files
 /.netrwhist

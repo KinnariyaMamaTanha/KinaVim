@@ -22,11 +22,12 @@ let g:startify_center = 50
 let g:startify_change_to_vcs_root = 1
 let g:startify_commands = [
             \ {'f': ["Find Files", "LeaderfFile"]},
-            \ {'C': ["Find Text", ":Leaderf rg"]},
-            \ {'P': ['Projects', ':ProjectList']},
+            \ {'c': ["Find Text", ":Leaderf rg"]},
+            \ {'p': ['Projects', ':ProjectList']},
             \ {'t': ['TODOs', ':ToDo']},
-            \ {'c': ['Configuration', ':e ~/.vim/vimrc']},
-            \ {'p': ['Plugins', ':e ~/.vim/configs/core/plugins.vim']},
+            \ {'C': ['Configuration', ':e ~/.vim/vimrc']},
+            \ {'P': ['Plugins', ':e ~/.vim/configs/core/plugins.vim']},
+            \ {'R': ['README', ':e ~/.vim/README.md']}
             \ ]
 
 " returns all modified files of the current git repo

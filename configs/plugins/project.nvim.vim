@@ -23,7 +23,7 @@ require("project_nvim").setup (
 
     -- Path where project.nvim will store the project history for use in
     -- telescope
-    -- datapath = vim.fn.stdpath("data"),
+    datapath = "~/.vim/projects.nvim",
 })
 
 require('telescope').load_extension('projects')

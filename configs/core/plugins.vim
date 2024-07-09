@@ -13,25 +13,27 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-plug' " vim-plug
 Plug 'neoclide/coc.nvim', { 'branch': 'release' } " LSP client
 Plug 'honza/vim-snippets', { 'on': [] } " code snippets，dependence of coc-snippets
-Plug 'dhruvasagar/vim-table-mode', { 'for': [ 'markdown', 'vim-plug'], 'on': 'TableModeToggle' }
+Plug 'dhruvasagar/vim-table-mode', { 'for': [ 'markdown', 'vim-plug' ], 'on': 'TableModeToggle' }
 Plug 'rhysd/clever-f.vim' " cleverer f key
 Plug 'Asheq/close-buffers.vim', { 'on': 'Bdelete' }, " close hidden buffers
 Plug 'tpope/vim-repeat' " coordination with vim-surround
-Plug 'wakatime/vim-wakatime', { 'on': [] } " awake time
+Plug 'wakatime/vim-wakatime' " awake time
 Plug 'kkvh/vim-docker-tools', { 'on': [ 'Docker', 'DockerToolsToggle', 'DockerToolsOpen', 'DockerToolsClose', 'DockerToolsSetHost' ] }
 Plug 'hotoo/pangu.vim', { 'for': [ 'markdown', 'text', 'vim-plug' ] }
 Plug 'lervag/vimtex'
 Plug 'makerj/vim-pdf', { 'for': [ 'pdf', 'vim-plugK' ] }
-Plug 'mayanksuman/vim-notes-markdown', { 'on': ['ToDo', 'NoteSearch', 'NoteCreate', 'NoteFuzzySearch', 'NoteFolder', 'NS', 'NC', 'NFS', 'NF'] }
+Plug 'mayanksuman/vim-notes-markdown', { 'on': [ 'ToDo', 'NoteSearch', 'NoteCreate', 'NoteFuzzySearch', 'NoteFolder', 'NS', 'NC', 'NFS', 'NF' ] }
 Plug 'voldikss/vim-translator', { 'on': [ 'TranslateW', 'TranslateWV' ]} " translator for words and paragraphs
-Plug 'tpope/vim-fugitive', { 'on': [ 'Git' ] }
+Plug 'tpope/vim-fugitive', { 'on': [ 'Git', 'Gdiffsplit', 'Gvdiffsplit', 'Gsplit', 'Gvsplit', 'GMove', 'GRename', 'GDelete', 'GRemove', 'GBrowse' ] }
+Plug 'dstein64/vim-startuptime', { 'on': 'StartupTime' }
 
 if has('nvim')
     Plug 'HiPhish/rainbow-delimiters.nvim'
     Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
     Plug 'navarasu/onedark.nvim'
-    Plug 'folke/tokyonight.nvim', { 'on': 'colorscheme' }
-    Plug 'Mofiqul/vscode.nvim', { 'on': 'colorscheme' }
+    Plug 'folke/tokyonight.nvim'
+    Plug 'Mofiqul/vscode.nvim'
+    Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
     Plug 'nvim-tree/nvim-web-devicons'
     Plug 'nvim-lualine/lualine.nvim'
     Plug 'folke/twilight.nvim' " Together with zen-mode.nvim
@@ -68,6 +70,11 @@ if has('nvim')
     Plug 'debugloop/telescope-undo.nvim', { 'on': [ 'Telescope' ] }
     Plug 'williamboman/mason.nvim', { 'on': [ 'Mason', 'MasonInstall', 'MasonUninstall', 'MasonUpdate' ]}
     Plug 'stevearc/conform.nvim'
+    Plug 'kkharji/sqlite.lua' " sqlite dependence for data-viewer.nvim
+    Plug 'VidocqH/data-viewer.nvim'
+    Plug 'jamestthompson3/nvim-remote-containers', { 'on': [ 'AttachToContainer', 'BuildImage', 'StartImage', 'ComposeUp', 'ComposeDown', 'ComposeDestroy' ] }  " like dev container of vscode
+    Plug 'folke/todo-comments.nvim'
+    Plug 'zbirenbaum/copilot.lua'
 else
     Plug 'KinnariyaMamaTanha/vim-startify', { 'branch': 'center' } " start menu
     Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' } " search
@@ -91,12 +98,12 @@ else
     Plug 'matze/vim-move' " move lines, characters up, down, left, right more quickly
     Plug 'preservim/vim-markdown', { 'for': [ 'markdown', 'vim-plug' ] }
     Plug 'jiangmiao/auto-pairs'
+    Plug 'github/copilot.vim', { 'for': [ 'cpp', 'c', 'python', 'sh', 'zsh' ]}
 endif
 
 " markdown plugin, replaced by coc-markdown-preview-enhanced
 " Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install', 'for': ['markdown'], 'on': 'MarkdownPreview'}  markdown preview
 " copilot
-" Plug 'github/copilot.vim', { 'for': ['cpp', 'c', 'python', 'sh', 'zsh']}
 " unused colorschemes
 " Plug 'yorickpeterse/vim-paper', {'on': 'colorscheme'}  like the paper
 " Plug 'tomasiser/vim-code-dark', {'on': 'colorscheme'}  vscode like theme
@@ -119,14 +126,11 @@ if !has('nvim')
         autocmd InsertEnter * call plug#load('vim-snippets')
         autocmd InsertEnter * call plug#load('vim-airline')
         autocmd InsertEnter * call plug#load('vim-devicons')
-        autocmd InsertEnter * call plug#load('vim-wakatime')
         autocmd InsertEnter * AirlineRefresh | autocmd! InsertEnter_auto_load
     augroup END
 else
     augroup InsertEnter_auto_load
         autocmd!
-        autocmd InsertEnter * call plug#load('vim-snippets')
-        autocmd InsertEnter * call plug#load('vim-wakatime')
-        autocmd! InsertEnter_auto_load
+        autocmd InsertEnter * call plug#load('vim-snippets') | autocmd! InsertEnter_auto_load
     augroup END
 endif

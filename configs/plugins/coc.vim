@@ -19,7 +19,6 @@ let g:coc_global_extensions = [
     \ 'coc-webview',
     \ 'coc-markdown-preview-enhanced',
     \ 'coc-html',
-    \ 'coc-todo-tree',
     \ 'coc-texlab',
     \ 'coc-lua',
     \ ]
@@ -127,18 +126,6 @@ nnoremap <silent> gs  :<C-u>CocList --normal gstatus<CR>
 " ==== coc-markdown-preview-enhanced ====
 " =======================================
 nmap <C-m><C-k> CocCommand markdown-preview-enhanced.openPreview<CR>
-
-if !has('nvim')
-    " ===================
-    " ==== coc-pairs ====
-    " ===================
-    autocmd FileType markdown let b:coc_pairs = [["$", "$"]]
-
-    " =======================
-    " ==== coc-todo-tree ====
-    " =======================
-    nmap TD :CocCommand coc-todo-tree.showTree<CR>
-endif
 
 " ====================
 " ==== coc-texlab ====

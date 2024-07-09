@@ -1,1 +1,1 @@
-command! Docker DockerToolsToggle
+nmap DK :DockerToolsToggle<CR>

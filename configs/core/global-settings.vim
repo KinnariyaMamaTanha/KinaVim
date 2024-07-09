@@ -71,3 +71,9 @@ autocmd BufEnter * if 0 == len(filter(range(1, winnr('$')), 'empty(getbufvar(win
 
 " conceal level
 set conceallevel=2
+
+if has('nvim')
+    set pumblend=20 " transparency for pop-up menu
+endif
+
+set virtualedit=block " virtual text setting

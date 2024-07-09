@@ -53,6 +53,9 @@ if has('nvim')
     source ~/.vim/configs/plugins/dap.vim
     source ~/.vim/configs/plugins/mason.vim
     source ~/.vim/configs/plugins/conform.vim
+    source ~/.vim/configs/plugins/data-viewer.vim
+    source ~/.vim/configs/plugins/todo-comments.vim
+    source ~/.vim/configs/plugins/copilot.lua.vim
 else
     source ~/.vim/configs/plugins/undotree.vim
     source ~/.vim/configs/plugins/startify.vim
