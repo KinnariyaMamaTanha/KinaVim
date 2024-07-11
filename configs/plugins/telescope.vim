@@ -1,3 +1,13 @@
+lua << EOF
+require('telescope').setup{
+    defaults = {
+        history = {
+            -- TODO: Change the path to your path!!! Like `/home/Username/.vim/telescope_history`
+            path = "/home/kinnariya/.vim/telescope_history"
+        }
+    }
+}
+EOF
 nnoremap <leader>f <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>c <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>b <cmd>lua require('telescope.builtin').buffers()<cr>

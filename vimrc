@@ -27,7 +27,7 @@ source ~/.vim/configs/plugins/pangu.vim
 source ~/.vim/configs/plugins/vimtex.vim
 source ~/.vim/configs/plugins/notes.vim
 source ~/.vim/configs/plugins/translator.vim
-
+source ~/.vim/configs/plugins/csv.vim
 
 if has('nvim')
     source ~/.vim/configs/plugins/dashboard.vim
@@ -35,7 +35,7 @@ if has('nvim')
     source ~/.vim/configs/plugins/lualine.vim
     source ~/.vim/configs/plugins/zenmode.vim
     source ~/.vim/configs/plugins/outline.vim
-    source ~/.vim/configs/plugins/project.nvim.vim
+    source ~/.vim/configs/plugins/workspaces.vim
     source ~/.vim/configs/plugins/telescope.vim
     source ~/.vim/configs/plugins/dropbar.vim
     source ~/.vim/configs/plugins/bufferline.vim
@@ -56,6 +56,7 @@ if has('nvim')
     source ~/.vim/configs/plugins/data-viewer.vim
     source ~/.vim/configs/plugins/todo-comments.vim
     source ~/.vim/configs/plugins/copilot.lua.vim
+    source ~/.vim/configs/plugins/conda.vim
 else
     source ~/.vim/configs/plugins/undotree.vim
     source ~/.vim/configs/plugins/startify.vim
@@ -71,4 +72,5 @@ else
     source ~/.vim/configs/plugins/move.vim
     source ~/.vim/configs/plugins/vim-markdown.vim
     source ~/.vim/configs/plugins/rainbow.vim
+    source ~/.vim/configs/plugins/copilot.vim
 endif

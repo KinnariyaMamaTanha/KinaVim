@@ -1,4 +1,5 @@
 lua << EOF
+-- Pay attention that the keymaps here is imap
 require('copilot').setup({
     panel = {
         auto_refresh = true,
@@ -7,12 +8,12 @@ require('copilot').setup({
             jump_next = "<C-j>",
             accept = "<CR>",
             open = "<F7>",
-            refresh = "<leader>r",
+            refresh = "<M-r>",
         }
     },
     suggestion = {
         keymap = {
-            accept = "<tab>",
+            accept = "<M-;>",
             accept_word = false,
             accept_line = false,
             next = "<M-]>",

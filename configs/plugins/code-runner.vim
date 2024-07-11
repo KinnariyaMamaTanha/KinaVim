@@ -2,7 +2,7 @@ lua << EOF
 
 require('code_runner').setup({
   filetype = {
-    python = "python3 -u",
+    python = "python -u",
     c = {
         "cd $dir &&",
         "gcc $fileName -g -o $fileNameWithoutExt &&",

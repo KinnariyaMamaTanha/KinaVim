@@ -23,6 +23,14 @@ let g:coc_global_extensions = [
     \ 'coc-lua',
     \ ]
 
+if !has('nvim')
+    let g:coc_global_extensions += [ 'coc-todo-tree' ]
+    " =======================
+    " ==== coc-todo-tree ====
+    " =======================
+    nmap TD :CocCommand coc-todo-tree.showTree<CR>
+endif
+
 " Use tab for trigger completion with characters ahead and navigate
 " NOTE: There's always complete item selected by default, you may want to enable
 " no select by `"suggest.noselect": true` in your configuration file

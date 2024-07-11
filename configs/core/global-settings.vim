@@ -19,6 +19,7 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "norm
 set scrolloff=5 " number of lines to keep above or below the cursor
 set sidescrolloff=4 " number of columns to keep left or right the cursor
 set cursorline " show the current cursor line
+set cursorcolumn " show the current cursor column
 let &t_SI = "\<Esc>[6 q" " cursor formats, suitable for Windows Terminal
 let &t_SR = "\<Esc>[4 q"
 let &t_EI = "\<Esc>[2 q"

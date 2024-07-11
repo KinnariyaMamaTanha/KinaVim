@@ -26,6 +26,7 @@ Plug 'mayanksuman/vim-notes-markdown', { 'on': [ 'ToDo', 'NoteSearch', 'NoteCrea
 Plug 'voldikss/vim-translator', { 'on': [ 'TranslateW', 'TranslateWV' ]} " translator for words and paragraphs
 Plug 'tpope/vim-fugitive', { 'on': [ 'Git', 'Gdiffsplit', 'Gvdiffsplit', 'Gsplit', 'Gvsplit', 'GMove', 'GRename', 'GDelete', 'GRemove', 'GBrowse' ] }
 Plug 'dstein64/vim-startuptime', { 'on': 'StartupTime' }
+Plug 'chrisbra/csv.vim', { 'for': [ 'vim-plug', 'csv' ] }
 
 if has('nvim')
     Plug 'HiPhish/rainbow-delimiters.nvim'
@@ -39,7 +40,7 @@ if has('nvim')
     Plug 'folke/twilight.nvim' " Together with zen-mode.nvim
     Plug 'folke/zen-mode.nvim', { 'on': 'ZenMode'}
     Plug 'hedyhli/outline.nvim', { 'on': 'Outline'} " Symbol outlines
-    Plug 'ahmedkhalf/project.nvim', { 'on': [ 'Telescope' ] }
+    Plug 'natecraddock/workspaces.nvim', { 'on': [ 'WorkspacesOpen', 'WorkspacesAdd', 'WorkspacesAddDir', 'WorkspacesList', 'WorkspacesListDirs', 'WorkspacesRemove', 'WorkspacesRemoveDir' ] }
     Plug 'nvim-lua/plenary.nvim' " dependence of other plugins
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'Bekaboo/dropbar.nvim'
@@ -75,6 +76,7 @@ if has('nvim')
     Plug 'jamestthompson3/nvim-remote-containers', { 'on': [ 'AttachToContainer', 'BuildImage', 'StartImage', 'ComposeUp', 'ComposeDown', 'ComposeDestroy' ] }  " like dev container of vscode
     Plug 'folke/todo-comments.nvim'
     Plug 'zbirenbaum/copilot.lua'
+    Plug 'kmontocam/nvim-conda'
 else
     Plug 'KinnariyaMamaTanha/vim-startify', { 'branch': 'center' } " start menu
     Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' } " search

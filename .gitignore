@@ -3,7 +3,9 @@
 /session
 /undo
 /vim-project-config
-/projects.nvim
 /.cache
+/mason
 # files
 /.netrwhist
+/workspaces
+/telescope_history

@@ -15,25 +15,27 @@
 
 - terminal with a nerd font and 256-color
 - vim >= 9.0, with *python3, conceal, terminal, patch* support; **OR** neovim(I am using 0.10 now).
-- curl, git, nodejs, yarn, universal-ctags, fd
+- curl, git, nodejs, yarn, universal-ctags[^4], fd, sed(1)[^5]
 - For Python:
-    - python3, black[^1] [^2](for formatting), ipython, debugpy[^1] [^2](for debugging)
+    - python3, black(formatter)[^1] [^2], ipython, debugpy(debugger)[^1] [^2] [^5], Anaconda or Miniconda >= 4.6[^5]
 - For C/C++:
-    - gcc, g++, clangd[^1], make, cmake, cmake-format[^1], cmake-language-server[^1] [^2], codelldb(for debugging)[^1]
+    - gcc, g++, clangd(LSP)[^1], make, cmake, cmake-format(formatter)[^1] [^5], cmake-language-server(LSP)[^1] [^2], codelldb(debugger)[^1] [^5]
 - For LaTeX:
-    - texlive, texlab[^1] [^3], zathura on WSL2(not recommended) or SumatraPDF on host Windows located at `/mnt/c/Users/YourUserName/AppData/Local/SumatraPDF/SumatraPDF.exe`(You need to replace your username in `~/.vim/configs/plugins/vimtex.vim)`
+    - texlive, texlab(LSP)[^1] [^3], latexindent(formatter)[^1], zathura on WSL2(not recommended) or SumatraPDF on host Windows located at `/mnt/c/Users/YourUserName/AppData/Local/SumatraPDF/SumatraPDF.exe`(You need to replace your username in `~/.vim/configs/plugins/vimtex.vim)`!!!
 - For Assembly:
-    - asm-lsp[^1], asmfmt[^1]
+    - asm-lsp(LSP)[^1], asmfmt(formatter)[^1] [^5]
 - For PDF:
     - poppler(poppler-utils) or pdftotext[^2]
 - For sqlite:
     - sqlite3
 - fzf, yazi, lazygit(all optional but useful)
-- For Neovim users: pynvim(python module)[^2]
+- For Neovim users: pynvim(python module)[^2], and tree-sitter-cli[^3]
 
 [^1]: If using Neovim, can be installed with mason.nvim
 [^2]: Can be installed with pip or conda
 [^3]: Can be installed with cargo
+[^4]: Vim only
+[^5]: Neovim only
 
 ## Installation
 
@@ -62,9 +64,11 @@ vim ~/.vim/vimrc
 1. For **Vim** users: Place `~/.vim/plugged/onedark.vim/autoload/airline/themes/onedark.vim` in your `~/.vim/plugged/vim-airline/autoload/airline/themes/` directory
 2. For **Vim** users: modify the source code of `vim-startify` in `~/.vim/plugged/vim-startify/autoload/startify.vim` according to the [issue](https://github.com/mhinz/vim-startify/issues/400#issuecomment-565858638)（6.9.2024: I forked the code of [mhinz/vim-startify](https://github.com/mhinz/vim-startify) and make some modifications, so now you don't need to fix the trouble manually, however, I won't develop any other functions so you may still need to switch to the original repository）
 3. For **Neovim** users: see neovim's [Transitioning from Vim](https://neovim.io/doc/user/nvim.html#nvim-from-vim).
-4. For **Neovim** users: add `export PATH="$PATH:$HOME/.local/share/nvim/mason/bin` to your `.bashrc` or `.zshrc` or so, then install LSPs, DAPs, etcs with mason.nvim.
-5. If you have a [wakatime](https://wakatime.com/) account, you should also set up wakatime plugin according to [vim-wakatime](https://github.com/wakatime/vim-wakatime).
-6. Read the configurations to be familiar with its keymaps and functions.
+4. For **Neovim** users: add `export PATH="$PATH:$HOME/.vim/mason/bin` to your `.bashrc` or `.zshrc` or so, then install LSPs, DAPs, etcs with mason.nvim.
+5. **Wakatime** setup: If you have a [wakatime](https://wakatime.com/) account, you should also set up wakatime plugin according to [vim-wakatime](https://github.com/wakatime/vim-wakatime).
+6. **Copilot** setup: If you have a GitHub copilot account, you should set up [copilot.vim](https://github.com/github/copilot.vim) in Vim or [copilot.lua](https://github.com/zbirenbaum/copilot.lua) in Neovim according to their READMEs.
+7. Press hot-key `TD` to see all the configurations you need to modify.
+8. Read the configurations to be familiar with its keymaps and functions.
 
 ## Plugins
 
@@ -87,6 +91,7 @@ vim ~/.vim/vimrc
 - [voldikss/vim-translator](https://github.com/voldikss/vim-translator)
 - [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [dstein64/vim-startuptime](https://github.com/dstein64/vim-startuptime)
+- [chrisbra/csv.vim](https://github.com/chrisbra/csv.vim)
 
 <details>
   <summary><b>coc.nvim plugins</b></summary>
@@ -108,7 +113,7 @@ vim ~/.vim/vimrc
 - [weirongxu/coc-webview](https://github.com/weirongxu/coc-webview)
 - [weirongxu/coc-markdown-preview-enhanced](https://github.com/weirongxu/coc-markdown-preview-enhanced)
 - [neoclide/coc-html](https://github.com/neoclide/coc-html)
-- [hexh250786313/coc-todo-tree](https://github.com/hexh250786313/coc-todo-tree)
+- [hexh250786313/coc-todo-tree](https://github.com/hexh250786313/coc-todo-tree) (Vim only)
 - [fannheyward/coc-texlab](https://github.com/fannheyward/coc-texlab)
 - [josa42/coc-lua](https://github.com/josa42/coc-lua)
 
@@ -129,7 +134,7 @@ vim ~/.vim/vimrc
 - [folke/twilight.nvim](https://github.com/folke/twilight.nvim)
 - [folke/zen-mode.nvim](https://github.com/folke/zen-mode.nvim)
 - [hedyhli/outline.nvim](https://github.com/hedyhli/outline.nvim)
-- [ahmedkhalf/project.nvim](https://github.com/ahmedkhalf/project.nvim)
+- [natecraddock/workspaces.nvim](https://github.com/natecraddock/workspaces.nvim)
 - [nvim-lua/plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
 - [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 - [Bekaboo/dropbar.nvim](https://github.com/Bekaboo/dropbar.nvim)
@@ -157,6 +162,8 @@ vim ~/.vim/vimrc
 - [VidocqH/data-viewer.nvim](https://github.com/VidocqH/data-viewer.nvim)
 - [jamestthompson3/nvim-remote-containers](https://github.com/jamestthompson3/nvim-remote-containers)
 - [folke/trouble.nvim](https://github.com/folke/trouble.nvim)
+- [zbirenbaum/copilot.lua](https://github.com/zbirenbaum/copilot.lua)
+- [kmontocam/nvim-conda](https://github.com/kmontocam/nvim-conda)
 
 </details>
 
@@ -196,7 +203,7 @@ vim ~/.vim/vimrc
 - [ ] Add support for remote development
 - [ ] Better support for makefile, cmake and docker.
 - [ ] Editing and running jupyter notebook inside neovim.
-- [ ] Support Python venv(especially conda) (de)activating and changing without leaving neovim/vim.
+- [x] Support Conda venv (de)activating without leaving neovim.
 - [ ] Better user experience
 
 ## Screenshots

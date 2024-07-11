@@ -72,7 +72,7 @@ outline_items = {
     -- virtual text, for quick navigation when not focused on outline.
     -- Why? See this comment:
     -- https://github.com/simrat39/symbols-outline.nvim/issues/212#issuecomment-1793503563
-    show_symbol_lineno = true,
+    show_symbol_lineno = false,
     -- Whether to highlight the currently hovered symbol and all direct parents
     highlight_hovered_item = true,
     -- Whether to automatically set cursor location in outline to match
@@ -143,7 +143,7 @@ preview_window = {
     -- winhl options for the preview window, see ':h winhl'
     winhl = 'NormalFloat:',
     -- Pseudo-transparency of the preview window, see ':h winblend'
-    winblend = 0,
+    winblend = 20,
     -- Experimental feature that let's you edit the source content live
     -- in the preview window. Like VS Code's "peek editor".
     live = false
@@ -190,7 +190,7 @@ keymaps = {
 },
 
 providers = {
-    priority = { 'lsp', 'coc', 'ctags','markdown', 'norg' },
+    priority = { 'lsp', 'coc', 'markdown', 'norg' },
     -- Configuration for each provider (3rd party providers are supported)
     lsp = {
         -- Lsp client names to ignore
@@ -198,7 +198,7 @@ providers = {
     },
     markdown = {
         -- List of supported ft's to use the markdown provider
-        filetypes = {'markdown'},
+        filetypes = { 'markdown' },
     },
 },
 

@@ -6,5 +6,3 @@ let g:copilot_filetypes = {
     \ 'sh': v:true,
     \ 'zsh': v:true,
   \ }
-autocmd ColorScheme solarized
-      \ highlight CopilotSuggestion guifg=#555555 ctermfg=8

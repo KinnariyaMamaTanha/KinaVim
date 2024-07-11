@@ -425,12 +425,12 @@ local opts = {
                 key_hl = "Number"
             },
             {
-                action = 'Telescope projects',
-                desc = " Projects",
+                action = 'Telescope workspaces',
+                desc = " Workspaces",
                 desc_hl = "String",
                 icon = " ",
                 icon_hl = "Title",
-                key = "p",
+                key = "w",
                 key_hl = "Number"
             },
             {

@@ -28,8 +28,8 @@ let g:vimtex_syntax_conceal = {
 " following line. The default is usually fine and is the symbol "\".
 let maplocalleader = "  "
 
-" TODO The username 自驾游 is my user name. You need to replace it with your username!!!
-let g:vimtex_view_general_viewer = '/mnt/c/Users/自驾游/AppData/Local/SumatraPDF/SumatraPDF.exe' 
+" TODO: The username 自驾游 is my user name. You need to replace it with your username!!!
+let g:vimtex_view_general_viewer = '/mnt/c/Users/自驾游/AppData/Local/SumatraPDF/SumatraPDF.exe'
 let g:vimtex_view_general_options = '-reuse-instance -forward-search @tex @line @pdf'
 
 let g:vimtex_cache_root = '.cache'
