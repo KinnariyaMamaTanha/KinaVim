@@ -1,5 +1,9 @@
 # KinaVim
 
+> [!WARNING]
+> PAY ATTENTION!
+> I'm using pure lua configurations for neovim now. See [KinanVim](https://github.com/KinnariyaMamaTanha/KinanVim)
+
 > My configuration of vim/neovim on ubuntu22.04(WSL2).
 
 ## Features
@@ -32,6 +36,8 @@
     - xxd
 - For docker:
     - docker, lazydocker(optional)[^5]
+- For lua:
+    - lua-language-server[^1]
 - fzf, yazi, lazygit(all optional but useful)
 - For Neovim users: pynvim(python module)[^2], and tree-sitter-cli[^3]
 

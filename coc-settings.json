@@ -23,7 +23,13 @@
             "initializationOptions": {
                 "buildDirectory": "build"
             }
-        }
+        },
+        "lua": {
+            "command": "lua-language-server",
+            "filetypes": [
+                "lua"
+            ]
+        },
     },
     "signature.floatConfig": {
         "winblend": 20

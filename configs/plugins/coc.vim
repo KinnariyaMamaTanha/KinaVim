@@ -21,7 +21,6 @@ let g:coc_global_extensions = [
     \ 'coc-markdown-preview-enhanced',
     \ 'coc-html',
     \ 'coc-texlab',
-    \ 'coc-lua',
     \ ]
 
 if !has('nvim')
