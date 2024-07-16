@@ -65,6 +65,16 @@ local python = Terminal:new({
         vim.api.nvim_buf_set_keymap(term.bufnr, "n", "q", "<cmd>close<CR>", {noremap = true, silent = true})
     end,
 })
+local lazydocker = Terminal:new({
+    cmd = "lazydocker",
+    hidden = true,
+    direction = 'float',
+    -- function to run on opening the terminal
+    on_open = function(term)
+        vim.cmd("startinsert!")
+        vim.api.nvim_buf_set_keymap(term.bufnr, "n", "q", "<cmd>close<CR>", {noremap = true, silent = true})
+    end,
+})
 
 function _lazygit_toggle()
   lazygit:toggle()
@@ -82,9 +92,14 @@ function _python_toggle()
   python:toggle()
 end
 
+function _lazydocker_toggle()
+  lazydocker:toggle()
+end
+
 EOF
 
 command! LazyGit lua _lazygit_toggle()
+command! LazyDocker lua _lazydocker_toggle()
 command! Ipython lua _ipython_toggle()
 command! Python lua _python_toggle()
 command! Yazi lua _yazi_toggle()

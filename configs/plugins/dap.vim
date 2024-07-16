@@ -26,8 +26,6 @@ dap.adapters.codelldb = {
   type = 'server',
   port = "${port}",
   executable = {
-    -- CHANGE THIS to your path!
-    command = '/home/kinnariya/.local/share/nvim/mason/bin/codelldb',
     args = {"--port", "${port}"},
 
     -- On windows you may have to uncomment this:

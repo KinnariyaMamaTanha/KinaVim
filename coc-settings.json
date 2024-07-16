@@ -1,4 +1,8 @@
 {
+    "cursors.cancelKey": "<leader><cr>",
+    "cursors.nextKey": "<C-n>",
+    "cursors.previousKey": "<C-p>",
+    "notification.winblend": 20,
     "languageserver": {
         "asm-lsp": {
             "command": "asm-lsp",
@@ -181,7 +185,7 @@
         "yn": "copyFilename",
         "yy": "copyFile",
         "dd": "cutFile",
-        "pp": "pasteFile",
+        "p": "pasteFile",
         "d": "delete",
         "D": "deleteForever",
         "<c-o>": "noop",
@@ -320,23 +324,28 @@
             "wait",
             "markNext:diagnosticError"
         ],
-        "[c": [
+        "[g": [
             "wait",
             "markPrev:git"
         ],
-        "]c": [
+        "]g": [
             "wait",
             "markNext:git"
         ],
         "<<": "gitStage",
         ">>": "gitUnstage"
     },
-    "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.diagnosticMode": "openFilesOnly",
     "python.analysis.typeCheckingMode": "basic",
     "python.formatting.provider": "black",
     "python.linting.pycodestyleEnabled": true,
     "python.linting.pydocstyleEnabled": true,
     "pyright.testing.provider": "pytest",
+    "python.linting.ignorePatterns": [
+        ".vscode/*.py",
+        "**/site-packages/**/*.py",
+        "dataset/*"
+    ],
     "pydocstring.enableFileAction": true,
     "inlayHint.display": false,
     "markdownlint.onChange": false,

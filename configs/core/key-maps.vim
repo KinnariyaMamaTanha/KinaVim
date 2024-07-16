@@ -51,21 +51,6 @@ nnoremap <down> :res -1<CR>
 nnoremap <left> :vertical resize +1<CR>
 nnoremap <right> :vertical resize -1<CR>
 
-" move between tablines
-if !has('nvim')
-    nnoremap <leader>1 <Plug>AirlineSelectTab1
-    nnoremap <leader>2 <Plug>AirlineSelectTab2
-    nnoremap <leader>3 <Plug>AirlineSelectTab3
-    nnoremap <leader>4 <Plug>AirlineSelectTab4
-    nnoremap <leader>5 <Plug>AirlineSelectTab5
-    nnoremap <leader>6 <Plug>AirlineSelectTab6
-    nnoremap <leader>7 <Plug>AirlineSelectTab7
-    nnoremap <leader>8 <Plug>AirlineSelectTab8
-    nnoremap <leader>9 <Plug>AirlineSelectTab9
-    nnoremap [t <Plug>AirlineSelectPrevTab
-    nnoremap ]t <Plug>AirlineSelectNextTab
-endif
-
 " save and quit
 nnoremap <C-s> :w<CR>
 nnoremap <C-q> :q<CR>
@@ -73,11 +58,12 @@ nnoremap <C-q> :q<CR>
 " ban s key
 nnoremap s <nop>
 
-" choose all
-nnoremap <C-a> ggVG
-
 " Go Home
-nnoremap <silent> <Home> :Startify<CR>
+if has('nvim')
+    nnoremap <silent> <Home> :Dashboard<CR>
+else
+    nnoremap <silent> <Home> :Startify<CR>
+endif
 
 " no highlight search
 nnoremap <LEADER><CR> :nohlsearch<CR>
@@ -120,9 +106,7 @@ augroup END
 " ======================
 " ==== command mode ====
 " ======================
-cnoremap <C-h> <Home>
-cnoremap <C-l> <End>
-cnoremap <C-b> <S-Left>
+cnoremap <C-a> <S-Left>
 cnoremap <C-e> <S-Right>
 
 

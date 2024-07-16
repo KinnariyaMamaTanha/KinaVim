@@ -1,3 +1,4 @@
+set signcolumn=yes
 " Use the same coc-setting.json file for both vim and neovim
 let g:coc_config_home = '~/.vim'
 " install coc extensions automatically when missing
@@ -24,7 +25,7 @@ let g:coc_global_extensions = [
     \ ]
 
 if !has('nvim')
-    let g:coc_global_extensions += [ 'coc-todo-tree' ]
+    let g:coc_global_extensions += [ 'coc-todo-tree', 'coc-floaterm', 'coc-pairs' ]
     " =======================
     " ==== coc-todo-tree ====
     " =======================
@@ -49,8 +50,8 @@ endfunction
 
 " Use `[d` and `]d` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list
-nmap <silent> [d <Plug>(coc-diagnostic-prev)
-nmap <silent> ]d <Plug>(coc-diagnostic-next)
+nnoremap <silent> [d <Plug>(coc-diagnostic-prev)
+nnoremap <silent> ]d <Plug>(coc-diagnostic-next)
 
 " Make <CR> to accept selected completion item or notify coc.nvim to format
 " <C-g>u breaks current undo, please make your own choice
@@ -58,10 +59,10 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " GoTo code navigation
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nnoremap <silent><nowait> gd :call CocAction('jumpDefinition',     v:false)<CR>
+nnoremap <silent><nowait> gy :call CocAction('jumpTypeDefinition', v:false)<CR>
+nnoremap <silent><nowait> gi :call CocAction('jumpImplementation', v:false)<CR>
+nnoremap <silent><nowait> gr :call CocAction('jumpReferences',     v:false)<CR>
 
 " Use K to show documentation in preview window
 nnoremap <silent> K :call ShowDocumentation()<CR>
@@ -76,17 +77,21 @@ endfunction
 " Applying code actions to the selected code block
 " Example: `<leader>aap` for current paragraph
 " Remap keys for applying code actions at the cursor position
-nmap <silent> sa <Plug>(coc-codeaction-source)
-nmap <silent> cl <Plug>(coc-codeaction-line)
-xmap <silent> ca <Plug>(coc-codeaction-selected)
-nmap <silent> ca <Plug>(coc-codeaction)
-nmap <silent> qf <Plug>(coc-fix-current)
+nnoremap <silent> sa <Plug>(coc-codeaction-source)
+nnoremap <silent> cl <Plug>(coc-codeaction-line)
+xnoremap <silent> ca <Plug>(coc-codeaction-selected)
+nnoremap <silent> ca <Plug>(coc-codeaction)
+nnoremap <silent> qf <Plug>(coc-fix-current)
 
 " Neovim-only settings
 if has('nvim')
     " Focus floating windows
     nmap <silent> <A-f> <Plug>(coc-float-jump)
 endif
+
+" Manually kill coc PID if failed
+autocmd VimLeavePre * if get(g:, 'coc_process_pid', 0)
+	\ | call system('kill -9 '.g:coc_process_pid) | endif
 
 " ======================
 " ==== coc-explorer ====
@@ -102,9 +107,16 @@ nmap rn <Plug>(coc-rename)
 " ==================
 " ==== refactor ====
 " ==================
-nmap <silent> <leader>re <Plug>(coc-codeaction-refactor)
-xmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
-nmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
+nnoremap <silent> <leader>re <Plug>(coc-codeaction-refactor)
+xnoremap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
+nnoremap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
+
+" ==================
+" === inlayhint ====
+" ==================
+
+nnoremap <silent> <leader>i :CocCommand document.toggleInlayHint<CR>
+
 
 " ==================
 " ==== coc-yank ====
@@ -118,24 +130,29 @@ nnoremap <silent> <leader>yc :CocCommand yank.clean<CR>
 " ==== coc-git ====
 " =================
 " navigate chunks of current buffer
-nmap [g <Plug>(coc-git-prevchunk)
-nmap ]g <Plug>(coc-git-nextchunk)
+nnoremap [g <Plug>(coc-git-prevchunk)
+nnoremap ]g <Plug>(coc-git-nextchunk)
 " navigate chunks of conflicts
-nmap [c <Plug>(coc-git-prevconflict)
-nmap ]c <Plug>(coc-git-nextconflict)
+nnoremap [c <Plug>(coc-git-prevconflict)
+nnoremap ]c <Plug>(coc-git-nextconflict)
 " show chunk diff at current position
-nmap df <Plug>(coc-git-chunkinfo)
+nnoremap df <Plug>(coc-git-chunkinfo)
 " show commit contains current position
-nmap cm <Plug>(coc-git-commit)
+nnoremap cm <Plug>(coc-git-commit)
 " show git status with coc-list
 nnoremap <silent> gs  :<C-u>CocList --normal gstatus<CR>
 
 " =======================================
 " ==== coc-markdown-preview-enhanced ====
 " =======================================
-nmap <C-m><C-k> CocCommand markdown-preview-enhanced.openPreview<CR>
+nnoremap <C-m><C-k> CocCommand markdown-preview-enhanced.openPreview<CR>
 
 " ====================
 " ==== coc-texlab ====
 " ====================
-nmap <leader>fs :CocCommand latex.ForwardSearch<CR>
+nnoremap <leader>fs :CocCommand latex.ForwardSearch<CR>
+
+" ==========================
+" ==== multiple cursors ====
+" ==========================
+nnoremap <silent> <C-c> <Plug>(coc-cursors-word)

@@ -1,20 +1,21 @@
 lua << EOF
 
 require('code_runner').setup({
-  filetype = {
-    python = "python -u",
-    c = {
-        "cd $dir &&",
-        "gcc $fileName -g -o $fileNameWithoutExt &&",
-        "$dir/$fileNameWithoutExt"
+    mode = "toggleterm",
+    filetype = {
+        python = "python -u",
+        c = {
+            "cd $dir &&",
+            "gcc $fileName -g -o $fileNameWithoutExt &&",
+            "$dir/$fileNameWithoutExt"
+        },
+        cpp = {
+            "cd $dir &&",
+            "g++ $fileName -g -o $fileNameWithoutExt &&",
+            "$dir/$fileNameWithoutExt"
+        },
+        bash = "bash $filename"
     },
-    cpp = {
-        "cd $dir &&",
-        "g++ $fileName -g -o $fileNameWithoutExt &&",
-        "$dir/$fileNameWithoutExt"
-    },
-    bash = "bash $filename"
-  },
 })
 
 EOF

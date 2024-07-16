@@ -6,8 +6,8 @@
 
 1. Full Support for C, C++, Assembly, Python, Markdown, LaTeX, html, dockerfile, cmake, lua and viml, including auto-completion, formatting, highlighting and linting functions. You can even view simple PDF files using poppler and vim-pdf plugin. For C, C++ and Python, there is a complete working flow: coding, compiling, running and debugging.
 2. Wonderful file navigation and tag list(powered by telescope, coc-list, LeaderF, coc-explorer, yazi, vista and universal-ctags).
-3. Integrated with various apps, including yazi, fzf, git, lazygit, Ipython and Python.
-4. Great English2Chinese translation.
+3. Integrated with various apps, including yazi, fzf, git, lazygit, lazydocker, Ipython and Python.
+4. Great English2Chinese translation. You can enjoy multi-language translation in neovim.
 5. Beautiful appearance(especially in Neovim).
 6. Working well for both vim and neovim.(except that if you use neovim and vim at the same time, the undo history will conflict)
 
@@ -28,6 +28,10 @@
     - poppler(poppler-utils) or pdftotext[^2]
 - For sqlite:
     - sqlite3
+- For hex[^5]:
+    - xxd
+- For docker:
+    - docker, lazydocker(optional)[^5]
 - fzf, yazi, lazygit(all optional but useful)
 - For Neovim users: pynvim(python module)[^2], and tree-sitter-cli[^3]
 
@@ -80,7 +84,6 @@ vim ~/.vim/vimrc
 - [honza/vim-snippets](https://github.com/honza/vim-snippets)
 - [dhruvasagar/vim-table-mode](https://github.com/dhruvasagar/vim-table-mode)
 - [rhysd/clever-f.vim](https://github.com/rhysd/clever-f.vim)
-- [Asheq/close-buffers.vim](https://github.com/Asheq/close-buffers.vim)
 - [tpope/vim-repeat](https://github.com/tpope/vim-repeat)
 - [wakatime/vim-wakatime](https://github.com/wakatime/vim-wakatime)
 - [kkvh/vim-docker-tools](https://github.com/kkvh/vim-docker-tools)
@@ -88,10 +91,10 @@ vim ~/.vim/vimrc
 - [lervag/vimtex](https://github.com/lervag/vimtex)
 - [makerj/vim-pdf](https://github.com/makerj/vim-pdf)
 - [mayanksuman/vim-notes-markdown](https://github.com/mayanksuman/vim-notes-markdown)
-- [voldikss/vim-translator](https://github.com/voldikss/vim-translator)
 - [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [dstein64/vim-startuptime](https://github.com/dstein64/vim-startuptime)
 - [chrisbra/csv.vim](https://github.com/chrisbra/csv.vim)
+- [lambdalisue/vim-suda](https://github.com/lambdalisue/vim-suda)
 
 <details>
   <summary><b>coc.nvim plugins</b></summary>
@@ -114,6 +117,7 @@ vim ~/.vim/vimrc
 - [weirongxu/coc-markdown-preview-enhanced](https://github.com/weirongxu/coc-markdown-preview-enhanced)
 - [neoclide/coc-html](https://github.com/neoclide/coc-html)
 - [hexh250786313/coc-todo-tree](https://github.com/hexh250786313/coc-todo-tree) (Vim only)
+- [voldikss/coc-floaterm](https://github.com/voldikss/coc-floaterm) (Vim only)
 - [fannheyward/coc-texlab](https://github.com/fannheyward/coc-texlab)
 - [josa42/coc-lua](https://github.com/josa42/coc-lua)
 
@@ -158,12 +162,14 @@ vim ~/.vim/vimrc
 - [debugloop/telescope-undo.nvim](https://github.com/debugloop/telescope-undo.nvim)
 - [williamboman/mason.nvim](https://github.com/williamboman/mason.nvim)
 - [stevearc/conform.nvim](https://github.com/stevearc/conform.nvim)
-- [kkharji/sqlite.lua](https://github.com/kkharji/sqlite.lua)
 - [VidocqH/data-viewer.nvim](https://github.com/VidocqH/data-viewer.nvim)
-- [jamestthompson3/nvim-remote-containers](https://github.com/jamestthompson3/nvim-remote-containers)
 - [folke/trouble.nvim](https://github.com/folke/trouble.nvim)
 - [zbirenbaum/copilot.lua](https://github.com/zbirenbaum/copilot.lua)
 - [kmontocam/nvim-conda](https://github.com/kmontocam/nvim-conda)
+- [RaafatTurki/hex.nvim](https://github.com/RaafatTurki/hex.nvim)
+- [potamides/pantran.nvim](https://github.com/potamides/pantran.nvim)
+- [rcarriga/nvim-notify](https://github.com/rcarriga/nvim-notify)
+- [Eandrju/cellular-automaton.nvim](https://github.com/Eandrju/cellular-automaton.nvim)
 
 </details>
 
@@ -172,12 +178,14 @@ vim ~/.vim/vimrc
 
 - [KinnariyaMamaTanha/vim-startify](https://github.com/KinnariyaMamaTanha/vim-startify)
 - [Yggdroot/LeaderF](https://github.com/Yggdroot/LeaderF)
+- [voldikss/vim-translator](https://github.com/voldikss/vim-translator)
 - [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter)
 - [liuchengxu/vista.vim](https://github.com/liuchengxu/vista.vim)
 - [luochen1990/rainbow](https://github.com/luochen1990/rainbow) [](https://github.com/)
 - [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot)
 - [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline)
 - [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons)
+- [Asheq/close-buffers.vim](https://github.com/Asheq/close-buffers.vim)
 - [joshdick/onedark.vim](https://github.com/joshdick/onedark.vim)
 - [mbbill/undotree](https://github.com/mbbill/undotree)
 - [rhysd/accelerated-jk](https://github.com/rhysd/accelerated-jk)
@@ -191,7 +199,6 @@ vim ~/.vim/vimrc
 - [tpope/vim-surround](https://github.com/tpope/vim-surround)
 - [matze/vim-move](https://github.com/matze/vim-move)
 - [preservim/vim-markdown](https://github.com/preservim/vim-markdown)
-- [jiangmiao/auto-pairs](https://github.com/jiangmiao/auto-pairs)
 - [github/copilot.vim](https://github.com/github/copilot.vim)
 
 </details>
@@ -202,6 +209,9 @@ vim ~/.vim/vimrc
 - [x] Integration with copilot (for neovim)
 - [ ] Add support for remote development
 - [ ] Better support for makefile, cmake and docker.
+  - [ ] makefile
+  - [ ] cmake
+  - [x] docker
 - [ ] Editing and running jupyter notebook inside neovim.
 - [x] Support Conda venv (de)activating without leaving neovim.
 - [ ] Better user experience
@@ -300,7 +310,7 @@ vim ~/.vim/vimrc
 ### [yazi](https://github.com/sxyazi/yazi) integration
 
 <details>
-  <summary><b>vim</b></summary>
+  <summary><b>vim and neovim</b></summary>
 
 ![yazi](./screenshots/7.png)
 

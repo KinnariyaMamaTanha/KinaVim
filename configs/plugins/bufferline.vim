@@ -1,13 +1,19 @@
-nnoremap <silent><leader>1 <Cmd>BufferLineGoToBuffer 1<CR>
-nnoremap <silent><leader>2 <Cmd>BufferLineGoToBuffer 2<CR>
-nnoremap <silent><leader>3 <Cmd>BufferLineGoToBuffer 3<CR>
-nnoremap <silent><leader>4 <Cmd>BufferLineGoToBuffer 4<CR>
-nnoremap <silent><leader>5 <Cmd>BufferLineGoToBuffer 5<CR>
-nnoremap <silent><leader>6 <Cmd>BufferLineGoToBuffer 6<CR>
-nnoremap <silent><leader>7 <Cmd>BufferLineGoToBuffer 7<CR>
-nnoremap <silent><leader>8 <Cmd>BufferLineGoToBuffer 8<CR>
-nnoremap <silent><leader>9 <Cmd>BufferLineGoToBuffer 9<CR>
-nnoremap <silent><leader>$ <Cmd>BufferLineGoToBuffer -1<CR>
+nnoremap <silent><leader>1 <cmd>BufferLineGoToBuffer 1<CR>
+nnoremap <silent><leader>2 <cmd>BufferLineGoToBuffer 2<CR>
+nnoremap <silent><leader>3 <cmd>BufferLineGoToBuffer 3<CR>
+nnoremap <silent><leader>4 <cmd>BufferLineGoToBuffer 4<CR>
+nnoremap <silent><leader>5 <cmd>BufferLineGoToBuffer 5<CR>
+nnoremap <silent><leader>6 <cmd>BufferLineGoToBuffer 6<CR>
+nnoremap <silent><leader>7 <cmd>BufferLineGoToBuffer 7<CR>
+nnoremap <silent><leader>8 <cmd>BufferLineGoToBuffer 8<CR>
+nnoremap <silent><leader>9 <cmd>BufferLineGoToBuffer 9<CR>
+nnoremap <silent><leader>$ <cmd>BufferLineGoToBuffer -1<CR>
+nnoremap <silent>QO        <cmd>BufferLineCloseOthers<CR>
+nnoremap <silent>QH        <cmd>BufferLineCloseLeft<CR>
+nnoremap <silent>QL        <cmd>BufferLineCloseRight<CR>
+nnoremap <silent><leader>[ <cmd>BufferLineCyclePrev<CR>
+nnoremap <silent><leader>] <cmd>BufferLineCycleNext<CR>
+command! Pin BufferLineTogglePin
 
 lua << EOF
 require('bufferline').setup {
@@ -27,15 +33,15 @@ require('bufferline').setup {
         --- diagnostics_dict is a dictionary from error level ("error", "warning" or "info")to number of errors for each level.
         --- this should return a string
         --- Don't get too fancy as this function will be executed a lot
-        diagnostics_indicator = function(count, level, diagnostics_dict, context)
-            local s = " "
-            for e, n in pairs(diagnostics_dict) do
-                local sym = e == "error" and " "
-                or (e == "warning" and " " or "" )
-                s = s .. n .. sym
-            end
-            return s
-        end,
+        -- diagnostics_indicator = function(count, level, diagnostics_dict, context)
+        --     local s = " "
+        --     for e, n in pairs(diagnostics_dict) do
+        --         local sym = e == "error" and " "
+        --         or (e == "warning" and " " or "" )
+        --         s = s .. n .. sym
+        --     end
+        --     return s
+        -- end,
 
         offsets = {
             {

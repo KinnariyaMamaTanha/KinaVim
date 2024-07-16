@@ -11,8 +11,8 @@ endif
 source ~/.vim/configs/core/global-settings.vim
 source ~/.vim/configs/core/key-maps.vim
 source ~/.vim/configs/core/plugins.vim
-source ~/.vim/configs/core/colorscheme.vim
 if !has('nvim')
+    source ~/.vim/configs/core/colorscheme.vim
     source ~/.vim/configs/core/run-codes.vim
 endif
 
@@ -21,16 +21,15 @@ endif
 " ===============
 source ~/.vim/configs/plugins/coc.vim
 source ~/.vim/configs/plugins/clever-f.vim
-source ~/.vim/configs/plugins/close-buffers.vim
 source ~/.vim/configs/plugins/dockertools.vim
 source ~/.vim/configs/plugins/pangu.vim
 source ~/.vim/configs/plugins/vimtex.vim
 source ~/.vim/configs/plugins/notes.vim
-source ~/.vim/configs/plugins/translator.vim
 source ~/.vim/configs/plugins/csv.vim
 
 if has('nvim')
     source ~/.vim/configs/plugins/dashboard.vim
+    source ~/.vim/after/autoload/coc/ui.vim
     source ~/.vim/configs/plugins/treesitter.vim
     source ~/.vim/configs/plugins/lualine.vim
     source ~/.vim/configs/plugins/zenmode.vim
@@ -57,6 +56,10 @@ if has('nvim')
     source ~/.vim/configs/plugins/todo-comments.vim
     source ~/.vim/configs/plugins/copilot.lua.vim
     source ~/.vim/configs/plugins/conda.vim
+    source ~/.vim/configs/plugins/hex.vim
+    source ~/.vim/configs/plugins/pantran.vim
+    source ~/.vim/configs/plugins/notify.vim
+    source ~/.vim/configs/plugins/onedark.vim
 else
     source ~/.vim/configs/plugins/undotree.vim
     source ~/.vim/configs/plugins/startify.vim
@@ -64,6 +67,7 @@ else
     source ~/.vim/configs/plugins/indentline.vim
     source ~/.vim/configs/plugins/nerdcommenter.vim
     source ~/.vim/configs/plugins/airline.vim
+    source ~/.vim/configs/plugins/close-buffers.vim
     source ~/.vim/configs/plugins/accelerated_jk.vim
     source ~/.vim/configs/plugins/goyo.vim
     source ~/.vim/configs/plugins/vista.vim
@@ -73,4 +77,5 @@ else
     source ~/.vim/configs/plugins/vim-markdown.vim
     source ~/.vim/configs/plugins/rainbow.vim
     source ~/.vim/configs/plugins/copilot.vim
+    source ~/.vim/configs/plugins/translator.vim
 endif

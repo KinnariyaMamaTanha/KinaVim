@@ -17,9 +17,10 @@ filetype indent on
 " cursor settings
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif " remember the last position of cursor
 set scrolloff=5 " number of lines to keep above or below the cursor
-set sidescrolloff=4 " number of columns to keep left or right the cursor
+set sidescrolloff=4 " number of columns to keep right the cursor
 set cursorline " show the current cursor line
 set cursorcolumn " show the current cursor column
+set whichwrap+=<,>,h,l " cross-line cursor move
 let &t_SI = "\<Esc>[6 q" " cursor formats, suitable for Windows Terminal
 let &t_SR = "\<Esc>[4 q"
 let &t_EI = "\<Esc>[2 q"
@@ -29,9 +30,16 @@ set hidden " hide buffers
 set showmatch " show paired brackets
 set autochdir " change the cwd when entering a new file
 set list " show the trailing whitespaces
+
+" mouse settings
 set mouse=a " allow using mouse
+set mousemodel=popup_setpos
+
 set shortmess+=c " shorter completion messages, for coc.nvim
 let &t_ut='' " Prevent incorrect backgroung rendering
+set autowrite " auto save
+set autoread " auto read modified files
+set confirm " confirm when working on read-only or not saved files
 
 " no swap files and (write) backup files
 set noswapfile
@@ -43,7 +51,7 @@ set background=dark " dark mode
 set termguicolors " Enable 24-RGB color
 set guifont=MesloLGS\ Nerd\ Font\ Mono:h13
 set encoding=utf-8 " character encoding method
-set t_Co=256
+set t_Co=256 " 256 color support
 set t_ut=
 
 " indent settings
@@ -78,3 +86,28 @@ if has('nvim')
 endif
 
 set virtualedit=block " virtual text setting
+set backspace=2
+
+" right click menu settings
+" auvmenu PopUp.-1-
+vnoremenu PopUp.CodeAction\ selected <Plug>(coc-codeaction-selected)
+vnoremenu PopUp.Refactor <Plug>(coc-codeaction-refactor-selected)
+vnoremenu PopUp.-2- :
+vnoremenu PopUp.Translate :Pantran<CR>
+
+if has('nvim')
+    aunmenu PopUp.How-to\ disable\ mouse
+endif
+" aunmenu PopUp.-1-
+nnoremenu PopUp.Definition <Plug>(coc-definition)
+nnoremenu PopUp.Implementation <Plug>(coc-implementation)
+nnoremenu PopUp.References <Plug>(coc-references)
+nnoremenu PopUp.Type\ Definition <Plug>(coc-type-definition)
+nnoremenu PopUp.Rename <Plug>(coc-rename)
+nnoremenu PopUp.-2- :
+nnoremenu PopUp.Open\ Fold  zO
+nnoremenu PopUp.Close\ Fold zC
+nnoremenu PopUp.-3- :
+nnoremenu PopUp.Coc\ Fix <Plug>(coc-fix-current)
+nnoremenu PopUp.CodeAction <Plug>(coc-codeaction)
+nnoremenu PopUp.CodeAction\ Line <Plug>(coc-codeaction-line)

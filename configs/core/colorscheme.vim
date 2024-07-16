@@ -25,16 +25,8 @@
 " colorscheme tokyonight
 
 " onedark settings
-if !has('nvim')
-    let g:onedark_hide_endofbuffer = 1
-    let g:onedark_termcolors = 256
-    let g:onedark_terminal_italics = 1
-    let g:airline_theme='onedark'
-else
-    source ~/.vim/configs/plugins/catppuccin.vim
-    source ~/.vim/configs/plugins/tokyonight.vim
-    source ~/.vim/configs/plugins/onedark.vim
-endif
-
+let g:onedark_hide_endofbuffer = 1
+let g:onedark_termcolors = 256
+let g:onedark_terminal_italics = 1
+let g:airline_theme='onedark'
 colorscheme onedark
-" colorscheme tokyonight-day

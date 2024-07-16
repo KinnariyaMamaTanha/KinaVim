@@ -12,6 +12,7 @@ function! CondaActivateAndRestart(...)
         let env = a:1
         execute 'CondaActivate' a:1
         silent! execute 'CocRestart'
+        execute 'lua require("notify")("The environment ' . a:1 . ' is activated.", "info", { title = "Conda" })'
     else
         execute 'CondaActivate'
         " Set up an autocommand to run CocRestart silently after the buffer changes

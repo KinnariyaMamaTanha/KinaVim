@@ -12,7 +12,8 @@ nmap <C-right> :FloatermNext<CR>
 command! Ya FloatermNew --width=0.8 --height=0.8 yazi
 
 " lazygit integration
-command! Lgit FloatermNew --width=0.9 --height=0.9 lazygit
+command! LazyGit FloatermNew --width=0.9 --height=0.9 lazygit
+command! LazyDocker FloatermNew --width=0.9 --height=0.9 lazydocker
 
 " fzf integration
 command! Fzf FloatermNew fzf
