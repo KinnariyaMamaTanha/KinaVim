@@ -2,7 +2,7 @@
 
 > [!WARNING]
 > PAY ATTENTION!
-> I'm using pure lua configurations for neovim now. See [KinanVim](https://github.com/KinnariyaMamaTanha/KinanVim)
+> I'm using pure lua configurations for neovim now. See [KinanVim](https://github.com/KinnariyaMamaTanha/KinanVim).
 
 > My configuration of vim/neovim on ubuntu22.04(WSL2).
 
@@ -55,18 +55,11 @@
 git clone https://github.com/KinnariyaMamaTanha/KinaVim ~/.vim
 ```
 
-- Enter vim/neovim for the first time. `vim-plug` will automatically install itself and other plugins.
+- Enter vim/neovim for the first time. `vim-plug` will automatically install itself and other plugins; After that, coc.nvim will automatically install its sub-plugins.
 
 ```bash
 vim
 # nvim
-```
-
-- Close vim/neovim and restart it again. Enter insert mode and `coc.nvim` will automatically install its extensions.
-
-```bash
-vim ~/.vim/vimrc
-# nvim ~/.vim/vimrc
 ```
 
 - After install all the plugins, you should:
@@ -210,6 +203,8 @@ vim ~/.vim/vimrc
 </details>
 
 ## Future Plans
+
+> Please see [KinanVim Future Plans](https://github.com/KinnariyaMamaTanha/KinanVim?tab=readme-ov-file#future-plans).
 
 - [ ] Add support for sql
 - [x] Integration with copilot (for neovim)
